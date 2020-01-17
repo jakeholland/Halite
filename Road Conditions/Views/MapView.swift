@@ -1,12 +1,12 @@
 import MapKit
+import RoadConditionsService
 import SwiftUI
 import UIKit
 
 struct MapView: UIViewRepresentable {
     
     @Binding var centerCoordinate: CLLocationCoordinate2D
-    
-    let viewModel = MapViewModel()
+    @Binding var roadConditionsSegments: [RoadConditionsSegment]
     
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
@@ -16,7 +16,7 @@ struct MapView: UIViewRepresentable {
     }
     
     func updateUIView(_ view: MKMapView, context: Context) {
-        let polylines = viewModel.roadConditionsSegments.polylines
+        let polylines = roadConditionsSegments.polylines
         
         guard view.overlays.compactMap({ $0 as? MKPolyline }) != polylines else { return }
         
@@ -43,7 +43,7 @@ struct MapView: UIViewRepresentable {
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
             guard
                 let polyline = overlay as? MKPolyline,
-                let roadConditionsSegment = parent.viewModel.roadConditionsSegment(for: polyline)
+                let roadConditionsSegment = parent.roadConditionsSegment(for: polyline)
                 else { return MKOverlayRenderer(overlay: overlay) }
 
             let polylineRenderer = MKPolylineRenderer(overlay: polyline)
@@ -52,22 +52,16 @@ struct MapView: UIViewRepresentable {
             return polylineRenderer
         }
     }
-}
-
-#if DEBUG
-extension MKPointAnnotation {
-    static var example: MKPointAnnotation {
-        let annotation = MKPointAnnotation()
-        annotation.title = "London"
-        annotation.subtitle = "Home to the 2012 Summer Olympics."
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 51.5, longitude: -0.13)
-        return annotation
+    
+    private func roadConditionsSegment(for polyline: MKPolyline) -> RoadConditionsSegment? {
+        roadConditionsSegments.first(where: { $0.multiPolyline.polylines.contains(polyline) })
     }
 }
 
 struct MapView_Previews: PreviewProvider {
+    static var exampleCoodinate: CLLocationCoordinate2D = .init(latitude: 51.5, longitude: -0.13)
+    
     static var previews: some View {
-        MapView(centerCoordinate: .constant(MKPointAnnotation.example.coordinate))
+        MapView(centerCoordinate: .constant(exampleCoodinate), roadConditionsSegments: .constant([]))
     }
 }
-#endif

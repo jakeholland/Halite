@@ -16,6 +16,7 @@
 		7D5C48D523CFF68000F271A5 /* ArcGISRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48D423CFF68000F271A5 /* ArcGISRouter.swift */; };
 		7D5C48DC23CFF7D700F271A5 /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48DB23CFF7D700F271A5 /* URLRequestExtension.swift */; };
 		7D5C48DE23CFF7F400F271A5 /* RoadConditionsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48DD23CFF7F400F271A5 /* RoadConditionsError.swift */; };
+		7D5C48E123D02BB400F271A5 /* RoadConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48E023D02BB400F271A5 /* RoadConditionsView.swift */; };
 		7DCCC30423CFF1D700C32068 /* RoadConditionsService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCCC2FB23CFF1D600C32068 /* RoadConditionsService.framework */; };
 		7DCCC30B23CFF1D700C32068 /* RoadConditionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCC30A23CFF1D700C32068 /* RoadConditionsServiceTests.swift */; };
 		7DCCC31023CFF1D700C32068 /* RoadConditionsService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCCC2FB23CFF1D600C32068 /* RoadConditionsService.framework */; };
@@ -33,7 +34,7 @@
 		7DD14E4D23CEB9060084B52A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD14E4B23CEB9060084B52A /* LaunchScreen.storyboard */; };
 		7DD14E5823CEB9060084B52A /* Road_ConditionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD14E5723CEB9060084B52A /* Road_ConditionsTests.swift */; };
 		7DD14E6323CEB9D20084B52A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD14E6223CEB9D20084B52A /* MapView.swift */; };
-		7DEA508E23CFA82100C98255 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA508D23CFA82100C98255 /* MapViewModel.swift */; };
+		7DEA508E23CFA82100C98255 /* RoadConditionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA508D23CFA82100C98255 /* RoadConditionsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		7D5C48D423CFF68000F271A5 /* ArcGISRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcGISRouter.swift; sourceTree = "<group>"; };
 		7D5C48DB23CFF7D700F271A5 /* URLRequestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
 		7D5C48DD23CFF7F400F271A5 /* RoadConditionsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsError.swift; sourceTree = "<group>"; };
+		7D5C48E023D02BB400F271A5 /* RoadConditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsView.swift; sourceTree = "<group>"; };
 		7DA7FBC223CF81D8002D443B /* IllinoisWinterRoadConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllinoisWinterRoadConditions.swift; sourceTree = "<group>"; };
 		7DA7FBC423CF91AB002D443B /* RoadConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoadConditions.swift; path = ../Routers/RoadConditions.swift; sourceTree = "<group>"; };
 		7DA7FBC623CF91E4002D443B /* RoadConditionsSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsSegment.swift; sourceTree = "<group>"; };
@@ -114,7 +116,7 @@
 		7DD14E5923CEB9060084B52A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DD14E6223CEB9D20084B52A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		7DD14E6623CEBB440084B52A /* Road Conditions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Road Conditions.entitlements"; sourceTree = "<group>"; };
-		7DEA508D23CFA82100C98255 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		7DEA508D23CFA82100C98255 /* RoadConditionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +331,7 @@
 				7DD14E4423CEB9030084B52A /* ContentView.swift */,
 				7DD14E4B23CEB9060084B52A /* LaunchScreen.storyboard */,
 				7DD14E6223CEB9D20084B52A /* MapView.swift */,
+				7D5C48E023D02BB400F271A5 /* RoadConditionsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -345,7 +348,7 @@
 		7DEA508C23CFA80A00C98255 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				7DEA508D23CFA82100C98255 /* MapViewModel.swift */,
+				7DEA508D23CFA82100C98255 /* RoadConditionsViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -557,7 +560,8 @@
 				7DD14E6323CEB9D20084B52A /* MapView.swift in Sources */,
 				7DD14E4323CEB9030084B52A /* SceneDelegate.swift in Sources */,
 				7DD14E4523CEB9030084B52A /* ContentView.swift in Sources */,
-				7DEA508E23CFA82100C98255 /* MapViewModel.swift in Sources */,
+				7D5C48E123D02BB400F271A5 /* RoadConditionsView.swift in Sources */,
+				7DEA508E23CFA82100C98255 /* RoadConditionsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,11 +2,8 @@ import MapKit
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State private var centerCoordinate = CLLocationCoordinate2D()
-    
     var body: some View {
-        MapView(centerCoordinate: $centerCoordinate)
+        RoadConditionsView()
             .edgesIgnoringSafeArea(.all)
     }
 }

@@ -1,8 +1,9 @@
 import Combine
+import Foundation
 import MapKit
 import RoadConditionsService
 
-final class MapViewModel: ObservableObject {
+final class RoadConditionsViewModel: ObservableObject {
     
     @Published var roadConditionsSegments: [RoadConditionsSegment] = []
     
@@ -17,15 +18,12 @@ final class MapViewModel: ObservableObject {
         roadConditionsService.getRoadConditions { result in
             switch result {
             case .success(let roadConditionsSegments):
-                self.roadConditionsSegments = roadConditionsSegments
+                DispatchQueue.main.async {
+                    self.roadConditionsSegments = roadConditionsSegments
+                }
             case .failure(let error):
                 print("Error: \(error.localizedDescription)")
             }
         }
     }
-    
-    func roadConditionsSegment(for polyline: MKPolyline) -> RoadConditionsSegment? {
-        roadConditionsSegments.first(where: { $0.multiPolyline.polylines.contains(polyline) })
-    }
-
 }
