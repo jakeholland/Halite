@@ -6,9 +6,11 @@ struct RoadConditionsView: View {
     @ObservedObject var viewModel = RoadConditionsViewModel()
     
     var body: some View {
-        MapView(centerCoordinate: $viewModel.centerCoordinate, roadConditionsSegments: $viewModel.roadConditionsSegments)
+        MapView(centerCoordinate: $viewModel.centerCoordinate,
+                roadConditionsSegments: $viewModel.roadConditionsSegments,
+                roadConditionsRegions: $viewModel.roadConditionsRegions)
             .edgesIgnoringSafeArea(.all)
-            .onAppear { self.viewModel.loadRoadConditions() }
+            .onAppear { self.viewModel.loadConditions() }
     }
 }
 

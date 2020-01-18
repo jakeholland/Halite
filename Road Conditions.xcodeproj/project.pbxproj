@@ -17,6 +17,8 @@
 		7D5C48DC23CFF7D700F271A5 /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48DB23CFF7D700F271A5 /* URLRequestExtension.swift */; };
 		7D5C48DE23CFF7F400F271A5 /* RoadConditionsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48DD23CFF7F400F271A5 /* RoadConditionsError.swift */; };
 		7D5C48E123D02BB400F271A5 /* RoadConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48E023D02BB400F271A5 /* RoadConditionsView.swift */; };
+		7D5C48E323D28BB900F271A5 /* RoadConditionsRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48E223D28BB900F271A5 /* RoadConditionsRegion.swift */; };
+		7D5C48E523D28CDD00F271A5 /* IllinoisCountyWinterRoadConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48E423D28CDD00F271A5 /* IllinoisCountyWinterRoadConditions.swift */; };
 		7DCCC30423CFF1D700C32068 /* RoadConditionsService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCCC2FB23CFF1D600C32068 /* RoadConditionsService.framework */; };
 		7DCCC30B23CFF1D700C32068 /* RoadConditionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCC30A23CFF1D700C32068 /* RoadConditionsServiceTests.swift */; };
 		7DCCC31023CFF1D700C32068 /* RoadConditionsService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCCC2FB23CFF1D600C32068 /* RoadConditionsService.framework */; };
@@ -93,6 +95,8 @@
 		7D5C48DB23CFF7D700F271A5 /* URLRequestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
 		7D5C48DD23CFF7F400F271A5 /* RoadConditionsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsError.swift; sourceTree = "<group>"; };
 		7D5C48E023D02BB400F271A5 /* RoadConditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsView.swift; sourceTree = "<group>"; };
+		7D5C48E223D28BB900F271A5 /* RoadConditionsRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsRegion.swift; sourceTree = "<group>"; };
+		7D5C48E423D28CDD00F271A5 /* IllinoisCountyWinterRoadConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllinoisCountyWinterRoadConditions.swift; sourceTree = "<group>"; };
 		7DA7FBC223CF81D8002D443B /* IllinoisWinterRoadConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllinoisWinterRoadConditions.swift; sourceTree = "<group>"; };
 		7DA7FBC423CF91AB002D443B /* RoadConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoadConditions.swift; path = ../Routers/RoadConditions.swift; sourceTree = "<group>"; };
 		7DA7FBC623CF91E4002D443B /* RoadConditionsSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsSegment.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 		7D5C48D623CFF72300F271A5 /* Response Models */ = {
 			isa = PBXGroup;
 			children = (
+				7D5C48E423D28CDD00F271A5 /* IllinoisCountyWinterRoadConditions.swift */,
 				7DA7FBC223CF81D8002D443B /* IllinoisWinterRoadConditions.swift */,
 			);
 			path = "Response Models";
@@ -194,6 +199,7 @@
 			children = (
 				7DA7FBC423CF91AB002D443B /* RoadConditions.swift */,
 				7D5C48DD23CFF7F400F271A5 /* RoadConditionsError.swift */,
+				7D5C48E223D28BB900F271A5 /* RoadConditionsRegion.swift */,
 				7DA7FBC623CF91E4002D443B /* RoadConditionsSegment.swift */,
 			);
 			path = Models;
@@ -530,6 +536,8 @@
 				7D5C48D023CFF54D00F271A5 /* RequestComponents.swift in Sources */,
 				7DCCC31F23CFF28800C32068 /* IllinoisWinterRoadConditions.swift in Sources */,
 				7DCCC31E23CFF25D00C32068 /* RoadConditionsService.swift in Sources */,
+				7D5C48E523D28CDD00F271A5 /* IllinoisCountyWinterRoadConditions.swift in Sources */,
+				7D5C48E323D28BB900F271A5 /* RoadConditionsRegion.swift in Sources */,
 				7DCCC32023CFF28800C32068 /* RoadConditions.swift in Sources */,
 				7D5C48CE23CFF52A00F271A5 /* EndpointRouter.swift in Sources */,
 			);

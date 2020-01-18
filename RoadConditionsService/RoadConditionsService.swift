@@ -23,6 +23,26 @@ public struct RoadConditionsService: RoadConditionsServiceProtocol {
             }
         }
     }
+    
+    public func getCountyConditions(completion: @escaping (Result<[RoadConditionsRegion], Error>) -> Void) {
+        let components: ArcGISRouter = .getIllinoisCountyConditions
+        guard let request = components.urlRequest else {
+            completion(.failure(RoadConditionsError.unknown))
+            return
+        }
+
+        request.responseGeoJsonDecoable { result in
+            switch result {
+            case .success(let mkGeoJsonArray):
+                let roadConditionsRegions = mkGeoJsonArray
+                                                .compactMap { $0 as? MKGeoJSONFeature }
+                                                .compactMap { RoadConditionsRegion(geoJsonFeature: $0) }
+                completion(.success(roadConditionsRegions))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }
 
 private extension RoadConditionsService {
