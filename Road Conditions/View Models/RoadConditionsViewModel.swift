@@ -5,13 +5,13 @@ import RoadConditionsService
 
 final class RoadConditionsViewModel: ObservableObject {
     
+    @Published var centerCoordinate = CLLocationCoordinate2D()
     @Published var roadConditionsSegments: [RoadConditionsSegment] = []
     
     private let roadConditionsService: RoadConditionsServiceProtocol
 
     init(roadConditionsService: RoadConditionsServiceProtocol = RoadConditionsService()) {
         self.roadConditionsService = roadConditionsService
-        loadRoadConditions()
     }
     
     func loadRoadConditions() {

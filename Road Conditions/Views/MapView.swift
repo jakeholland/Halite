@@ -16,9 +16,10 @@ struct MapView: UIViewRepresentable {
     }
     
     func updateUIView(_ view: MKMapView, context: Context) {
+        let currentPolylines = view.overlays.compactMap { $0 as? MKPolyline }
         let polylines = roadConditionsSegments.polylines
         
-        guard view.overlays.compactMap({ $0 as? MKPolyline }) != polylines else { return }
+        guard currentPolylines != polylines else { return }
         
         view.removeAllOverlays()
         view.addOverlays(polylines)
@@ -43,7 +44,7 @@ struct MapView: UIViewRepresentable {
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
             guard
                 let polyline = overlay as? MKPolyline,
-                let roadConditionsSegment = parent.roadConditionsSegment(for: polyline)
+                let roadConditionsSegment = roadConditionsSegment(for: polyline)
                 else { return MKOverlayRenderer(overlay: overlay) }
 
             let polylineRenderer = MKPolylineRenderer(overlay: polyline)
@@ -51,10 +52,10 @@ struct MapView: UIViewRepresentable {
             polylineRenderer.lineWidth = 5
             return polylineRenderer
         }
-    }
-    
-    private func roadConditionsSegment(for polyline: MKPolyline) -> RoadConditionsSegment? {
-        roadConditionsSegments.first(where: { $0.multiPolyline.polylines.contains(polyline) })
+        
+        private func roadConditionsSegment(for polyline: MKPolyline) -> RoadConditionsSegment? {
+            parent.roadConditionsSegments.first(where: { $0.multiPolyline.polylines.contains(polyline) })
+        }
     }
 }
 
