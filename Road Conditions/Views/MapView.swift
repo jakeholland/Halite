@@ -18,6 +18,7 @@ struct MapView: UIViewRepresentable {
     func updateUIView(_ view: MKMapView, context: Context) {
         let currentPolylines = view.overlays.compactMap { $0 as? MKPolyline }
         let polylines = roadConditionsSegments.polylines
+        context.coordinator.roadConditionsSegments = roadConditionsSegments
         
         guard currentPolylines != polylines else { return }
         
@@ -32,6 +33,7 @@ struct MapView: UIViewRepresentable {
     
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapView
+        var roadConditionsSegments: [RoadConditionsSegment] = []
 
         init(_ parent: MapView) {
             self.parent = parent
@@ -54,7 +56,7 @@ struct MapView: UIViewRepresentable {
         }
         
         private func roadConditionsSegment(for polyline: MKPolyline) -> RoadConditionsSegment? {
-            parent.roadConditionsSegments.first(where: { $0.multiPolyline.polylines.contains(polyline) })
+            roadConditionsSegments.first(where: { $0.multiPolyline.polylines.contains(polyline) })
         }
     }
 }

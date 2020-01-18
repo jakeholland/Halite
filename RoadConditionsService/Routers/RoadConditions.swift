@@ -11,7 +11,7 @@ public extension RoadConditions {
     var color: UIColor {
         switch self {
         case .clear:
-            return .black
+            return .clear
         case .partlyCovered:
             return .lightGray
         case .mostlyCovered:

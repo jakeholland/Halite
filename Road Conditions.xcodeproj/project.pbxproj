@@ -161,13 +161,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		7D3A759123CFA3470008E73C /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		7D5C48D123CFF56D00F271A5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,7 +292,6 @@
 				7DD14E4223CEB9030084B52A /* SceneDelegate.swift */,
 				7DD14E4623CEB9060084B52A /* Assets.xcassets */,
 				7D3A759023CFA3380008E73C /* Extensions */,
-				7D3A759123CFA3470008E73C /* Models */,
 				7DD14E4823CEB9060084B52A /* Preview Content */,
 				7DD14E6523CEBB1E0084B52A /* Supporting Files */,
 				7DEA508C23CFA80A00C98255 /* View Models */,
