@@ -72,7 +72,7 @@ struct MapView: UIViewRepresentable {
                 else { return nil }
             
             let polygonRenderer = MKPolygonRenderer(overlay: polygon)
-            polygonRenderer.fillColor = roadConditionsRegion.roadConditions.color.withAlphaComponent(0.3)
+            polygonRenderer.fillColor = roadConditionsRegion.roadConditions.color.withAlphaComponent(0.1)
             
             return polygonRenderer
         }

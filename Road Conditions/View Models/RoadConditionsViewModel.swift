@@ -8,6 +8,7 @@ final class RoadConditionsViewModel: ObservableObject {
     @Published var centerCoordinate = CLLocationCoordinate2D()
     @Published var roadConditionsSegments: [RoadConditionsSegment] = []
     @Published var roadConditionsRegions: [RoadConditionsRegion] = []
+    @Published var isLoading: Bool = false
     
     private let roadConditionsService: RoadConditionsServiceProtocol
 
@@ -16,6 +17,7 @@ final class RoadConditionsViewModel: ObservableObject {
     }
     
     func loadConditions() {
+        isLoading = true
         loadRoadConditions()
         loadCountyConditions()
     }
@@ -35,6 +37,7 @@ final class RoadConditionsViewModel: ObservableObject {
     
     private func loadCountyConditions() {
         roadConditionsService.getCountyConditions { result in
+//            self.isLoading = false
             switch result {
             case .success(let roadConditionsRegions):
                 DispatchQueue.main.async {
