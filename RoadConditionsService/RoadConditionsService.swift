@@ -8,9 +8,9 @@ public struct RoadConditionsService: RoadConditionsServiceProtocol {
     public func getRoadConditions(completion: @escaping (Swift.Result<([RoadConditionsMultiPolyline], [RoadConditionsMultiPolygon]), Error>) -> Void) {
         firstly {
             getRoadConditions()
-        }.then { roadConditionsMultiPolyline in
-            self.getCountyConditions().map { roadConditionsMultiPolygon in
-                (roadConditionsMultiPolyline, roadConditionsMultiPolygon)
+        }.then { roadConditionsMultiPolylines in
+            self.getCountyConditions().map { roadConditionsMultiPolygons in
+                (roadConditionsMultiPolylines, roadConditionsMultiPolygons)
             }
         }.done { roadConditions in
             completion(.success(roadConditions))

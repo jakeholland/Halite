@@ -1,8 +1,8 @@
 import MapKit
 
 extension MKMapView {
-    func zoom(to polylines: [MKPolyline], animated: Bool) {
-        let boundingMapRects = polylines.map { $0.boundingMapRect }
+    func zoom(to overlays: [MKOverlay], animated: Bool) {
+        let boundingMapRects = overlays.map { $0.boundingMapRect }
         
         guard let firstMapRect = boundingMapRects.first else { return }
         
