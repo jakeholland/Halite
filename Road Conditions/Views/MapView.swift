@@ -12,6 +12,7 @@ struct MapView: UIViewRepresentable {
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
+        mapView.isRotateEnabled = false
 
         return mapView
     }
@@ -55,7 +56,7 @@ struct MapView: UIViewRepresentable {
             guard let roadConditionsSegment = overlay as? RoadConditionsMultiPolyline else { return nil }
 
             let polylineRenderer = MKMultiPolylineRenderer(overlay: roadConditionsSegment)
-            polylineRenderer.strokeColor = roadConditionsSegment.roadConditions.lineColor.uiColor
+            polylineRenderer.strokeColor = roadConditionsSegment.roadConditions.lineColor
             polylineRenderer.lineWidth = 5
             return polylineRenderer
         }
@@ -64,7 +65,7 @@ struct MapView: UIViewRepresentable {
             guard let roadConditionsRegion = overlay as? RoadConditionsMultiPolygon else { return nil }
             
             let polygonRenderer = MKMultiPolygonRenderer(overlay: roadConditionsRegion)
-            polygonRenderer.fillColor = roadConditionsRegion.roadConditions.regionColor.uiColor
+            polygonRenderer.fillColor = roadConditionsRegion.roadConditions.regionColor
             return polygonRenderer
         }
     }

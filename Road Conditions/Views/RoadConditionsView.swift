@@ -15,6 +15,13 @@ struct RoadConditionsView: View {
                         roadConditionsSegments: $viewModel.roadConditionsSegments,
                         roadConditionsRegions: $viewModel.roadConditionsRegions)
                     .onAppear { self.viewModel.loadRoadConditions() }
+                GeometryReader { geometry in
+                    MapButtons(showLegend: self.$showLegend,
+                               isLoading: self.$viewModel.isLoading,
+                               isCentered: self.$viewModel.isCentered,
+                               loadRoadConditions: self.viewModel.loadRoadConditions)
+                    .offset(x: (geometry.size.width / 2) - 40, y: -(geometry.size.height / 2) + 130)
+                }
                 
                 if showLegend {
                     BottomCard {
@@ -27,24 +34,7 @@ struct RoadConditionsView: View {
                     }
                 }
             }
-            .edgesIgnoringSafeArea(.all)
-            .navigationBarTitle("Road Conditions", displayMode: .inline)
-            .navigationBarItems(leading:
-                Button(action: { self.showLegend.toggle() }) {
-                        if showLegend {
-                            Image(systemName: "map.fill")
-                        } else {
-                            Image(systemName: "map")
-                        }
-                    },
-                                trailing:
-                Button(action: self.viewModel.loadRoadConditions) {
-                    if viewModel.isLoading {
-                        ActivityIndicator()
-                    } else {
-                        Image(systemName: "arrow.2.circlepath")
-                    }
-                })
+            .edgesIgnoringSafeArea(.vertical)
         }
     }
 }

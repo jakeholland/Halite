@@ -9,6 +9,7 @@ final class RoadConditionsViewModel: ObservableObject {
     @Published var roadConditionsSegments: [RoadConditionsMultiPolyline] = []
     @Published var roadConditionsRegions: [RoadConditionsMultiPolygon] = []
     @Published var isLoading: Bool = false
+    @Published var isCentered: Bool = false
     
     private let roadConditionsService: RoadConditionsServiceProtocol
 
