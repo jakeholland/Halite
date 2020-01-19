@@ -1,59 +1,78 @@
 import MapKit
+import PromiseKit
 
 public struct RoadConditionsService: RoadConditionsServiceProtocol {
     
     public init() { }
     
-    public func getRoadConditions(completion: @escaping (Result<[RoadConditionsSegment], Error>) -> Void) {
-        let components: ArcGISRouter = .getIllinoisRoadConditions
-        guard let request = components.urlRequest else {
-            completion(.failure(RoadConditionsError.unknown))
-            return
+    public func getRoadConditions(completion: @escaping (Swift.Result<([RoadConditionsMultiPolyline], [RoadConditionsMultiPolygon]), Error>) -> Void) {
+        firstly {
+            getRoadConditions()
+        }.then { roadConditionsMultiPolyline in
+            self.getCountyConditions().map { roadConditionsMultiPolygon in
+                (roadConditionsMultiPolyline, roadConditionsMultiPolygon)
+            }
+        }.done { roadConditions in
+            completion(.success(roadConditions))
+        }.catch { error in
+            completion(.failure(error))
         }
+    }
+}
 
-        request.responseGeoJsonDecoable { result in
-            switch result {
-            case .success(let mkGeoJsonArray):
+private extension RoadConditionsService {
+    func getRoadConditions() -> Promise<[RoadConditionsMultiPolyline]> {
+        Promise { seal in
+            let components: ArcGISRouter = .getIllinoisRoadConditions
+            guard let request = components.urlRequest else {
+                seal.reject(RoadConditionsError.unknown)
+                return
+            }
+            
+            firstly {
+                request.responseGeoJsonDecoable()
+            }.done { mkGeoJsonArray in
                 let roadConditionsSegments = mkGeoJsonArray
                                                 .compactMap { $0 as? MKGeoJSONFeature }
-                                                .compactMap { RoadConditionsSegment(geoJsonFeature: $0) }
-                completion(.success(roadConditionsSegments))
-            case .failure(let error):
-                completion(.failure(error))
+                                                .compactMap { RoadConditionsMultiPolyline($0) }
+                seal.fulfill(roadConditionsSegments)
+            }.catch { error in
+                seal.reject(error)
             }
         }
     }
     
-    public func getCountyConditions(completion: @escaping (Result<[RoadConditionsRegion], Error>) -> Void) {
-        let components: ArcGISRouter = .getIllinoisCountyConditions
-        guard let request = components.urlRequest else {
-            completion(.failure(RoadConditionsError.unknown))
-            return
-        }
-
-        request.responseGeoJsonDecoable { result in
-            switch result {
-            case .success(let mkGeoJsonArray):
+    func getCountyConditions() -> Promise<[RoadConditionsMultiPolygon]> {
+        Promise { seal in
+            let components: ArcGISRouter = .getIllinoisCountyConditions
+            guard let request = components.urlRequest else {
+                seal.reject(RoadConditionsError.unknown)
+                return
+            }
+            
+            firstly {
+                request.responseGeoJsonDecoable()
+            }.done { mkGeoJsonArray in
                 let roadConditionsRegions = mkGeoJsonArray
                                                 .compactMap { $0 as? MKGeoJSONFeature }
-                                                .compactMap { RoadConditionsRegion(geoJsonFeature: $0) }
-                completion(.success(roadConditionsRegions))
-            case .failure(let error):
-                completion(.failure(error))
+                                                .compactMap { RoadConditionsMultiPolygon($0) }
+                seal.fulfill(roadConditionsRegions)
+            }.catch { error in
+                seal.reject(error)
             }
         }
     }
 }
 
 private extension RoadConditionsService {
-    func loadMockRoadConditionsSegments() -> [RoadConditionsSegment] {
+    func loadMockRoadConditionsSegments() -> [RoadConditionsMultiPolyline] {
         let geoJSONDecoder = MKGeoJSONDecoder()
         guard
             let geoJson = geoJsonData(for: "Test_Road_Conditions"),
             let roadConditions = try? geoJSONDecoder.decode(geoJson)
             else { return [] }
         
-        return roadConditions.compactMap { $0 as? MKGeoJSONFeature }.compactMap { RoadConditionsSegment(geoJsonFeature: $0) }
+        return roadConditions.compactMap { $0 as? MKGeoJSONFeature }.compactMap { RoadConditionsMultiPolyline($0) }
     }
     
     func geoJsonData(for localFileName: String) -> Data? {

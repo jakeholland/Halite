@@ -14,7 +14,6 @@ public final class RoadConditionsMultiPolygon: MKMultiPolygon {
             else { return nil }
         
         self.roadConditions = roadConditions
-        
         super.init(polygons)
     }
 }

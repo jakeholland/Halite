@@ -6,8 +6,8 @@ import UIKit
 struct MapView: UIViewRepresentable {
     
     @Binding var centerCoordinate: CLLocationCoordinate2D
-    @Binding var roadConditionsSegments: [RoadConditionsSegment]
-    @Binding var roadConditionsRegions: [RoadConditionsRegion]
+    @Binding var roadConditionsSegments: [RoadConditionsMultiPolyline]
+    @Binding var roadConditionsRegions: [RoadConditionsMultiPolygon]
     
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
@@ -38,8 +38,8 @@ struct MapView: UIViewRepresentable {
     
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapView
-        var roadConditionsSegments: [RoadConditionsSegment] = []
-        var roadConditionsRegions: [RoadConditionsRegion] = []
+        var roadConditionsSegments: [RoadConditionsMultiPolyline] = []
+        var roadConditionsRegions: [RoadConditionsMultiPolygon] = []
 
         init(_ parent: MapView) {
             self.parent = parent
@@ -54,35 +54,20 @@ struct MapView: UIViewRepresentable {
         }
         
         private func polylineRenderer(for overlay: MKOverlay) -> MKPolylineRenderer? {
-            guard
-                let polyline = overlay as? MKPolyline,
-                let roadConditionsSegment = roadConditionsSegment(for: polyline)
-                else { return nil }
+            guard let roadConditionsSegment = overlay as? RoadConditionsMultiPolyline else { return nil }
 
-            let polylineRenderer = MKPolylineRenderer(overlay: polyline)
+            let polylineRenderer = MKPolylineRenderer(overlay: roadConditionsSegment)
             polylineRenderer.strokeColor = roadConditionsSegment.roadConditions.color
             polylineRenderer.lineWidth = 5
             return polylineRenderer
         }
         
         private func polygonRenderer(for overlay: MKOverlay) -> MKPolygonRenderer? {
-            guard
-                let polygon = overlay as? MKPolygon,
-                let roadConditionsRegion = roadConditionsRegion(for: polygon)
-                else { return nil }
+            guard let roadConditionsRegion = overlay as? RoadConditionsMultiPolygon else { return nil }
             
-            let polygonRenderer = MKPolygonRenderer(overlay: polygon)
+            let polygonRenderer = MKPolygonRenderer(overlay: roadConditionsRegion)
             polygonRenderer.fillColor = roadConditionsRegion.roadConditions.color.withAlphaComponent(0.1)
-            
             return polygonRenderer
-        }
-        
-        private func roadConditionsSegment(for polyline: MKPolyline) -> RoadConditionsSegment? {
-            roadConditionsSegments.first(where: { $0.multiPolyline.polylines.contains(polyline) })
-        }
-        
-        private func roadConditionsRegion(for polygon: MKPolygon) -> RoadConditionsRegion? {
-            roadConditionsRegions.first(where: { $0.multiPolygon.polygons.contains(polygon) })
         }
     }
 }

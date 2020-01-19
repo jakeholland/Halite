@@ -1,16 +1,9 @@
 import MapKit
 
-public struct RoadConditionsSegment {
+public final class RoadConditionsMultiPolyline: MKMultiPolyline {
     public let roadConditions: RoadConditions
-    public let multiPolyline: MKMultiPolyline
-}
-
-public extension Array where Element == RoadConditionsSegment {
-    var polylines: [MKPolyline] { flatMap { $0.multiPolyline.polylines } }
-}
-
-extension RoadConditionsSegment {
-    init?(geoJsonFeature: MKGeoJSONFeature) {
+    
+    init?(_ geoJsonFeature: MKGeoJSONFeature) {
         let polylines = geoJsonFeature.geometry.compactMap { $0 as? MKPolyline }
         guard
             !polylines.isEmpty,
@@ -21,6 +14,10 @@ extension RoadConditionsSegment {
             else { return nil }
         
         self.roadConditions = roadConditions
-        self.multiPolyline = MKMultiPolyline(polylines)
+        super.init(polylines)
     }
+}
+
+public extension Array where Element == RoadConditionsMultiPolyline {
+    var polylines: [MKPolyline] { flatMap { $0.polylines } }
 }
