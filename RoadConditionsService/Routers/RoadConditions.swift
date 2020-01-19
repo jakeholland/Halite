@@ -1,6 +1,6 @@
 import SwiftUI
 
-public enum RoadConditions: String {
+public enum RoadConditions: String, CaseIterable {
     case clear = "Clear"
     case partlyCovered = "Partly Covered with ice or snow"
     case mostlyCovered = "Mostly Covered with ice or snow"
@@ -8,16 +8,28 @@ public enum RoadConditions: String {
 }
 
 public extension RoadConditions {
-    var color: UIColor {
+    var lineColor: Color {
         switch self {
         case .clear:
-            return .green
+            return .clear
         case .partlyCovered:
-            return .lightGray
+            return .secondary
         case .mostlyCovered:
             return .gray
         case .covered:
-            return .blue
+            return .black
+        }
+    }
+    
+    var regionColor: Color { lineColor.opacity(0.2) }
+    
+    var view: some View {
+        HStack {
+            Rectangle()
+                .fill(lineColor)
+                .frame(width: 40, height: 20)
+                .cornerRadius(2)
+            Text(rawValue)
         }
     }
 }

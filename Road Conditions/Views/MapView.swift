@@ -55,7 +55,7 @@ struct MapView: UIViewRepresentable {
             guard let roadConditionsSegment = overlay as? RoadConditionsMultiPolyline else { return nil }
 
             let polylineRenderer = MKMultiPolylineRenderer(overlay: roadConditionsSegment)
-            polylineRenderer.strokeColor = roadConditionsSegment.roadConditions.color
+            polylineRenderer.strokeColor = roadConditionsSegment.roadConditions.lineColor.uiColor
             polylineRenderer.lineWidth = 5
             return polylineRenderer
         }
@@ -64,7 +64,7 @@ struct MapView: UIViewRepresentable {
             guard let roadConditionsRegion = overlay as? RoadConditionsMultiPolygon else { return nil }
             
             let polygonRenderer = MKMultiPolygonRenderer(overlay: roadConditionsRegion)
-            polygonRenderer.fillColor = roadConditionsRegion.roadConditions.color.withAlphaComponent(0.1)
+            polygonRenderer.fillColor = roadConditionsRegion.roadConditions.regionColor.uiColor
             return polygonRenderer
         }
     }

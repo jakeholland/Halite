@@ -39,6 +39,8 @@
 		7DEA508E23CFA82100C98255 /* RoadConditionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA508D23CFA82100C98255 /* RoadConditionsViewModel.swift */; };
 		7DF8F2F423D371BD008A8390 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF8F2F323D371BD008A8390 /* ActivityIndicator.swift */; };
 		7DF8F2F723D4C800008A8390 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7DF8F2F623D4C800008A8390 /* PromiseKit */; };
+		7DF8F2F923D4DAF9008A8390 /* BottomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF8F2F823D4DAF9008A8390 /* BottomCard.swift */; };
+		7DF8F2FB23D4E1C6008A8390 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF8F2FA23D4E1C6008A8390 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +126,8 @@
 		7DD14E6623CEBB440084B52A /* Road Conditions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Road Conditions.entitlements"; sourceTree = "<group>"; };
 		7DEA508D23CFA82100C98255 /* RoadConditionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsViewModel.swift; sourceTree = "<group>"; };
 		7DF8F2F323D371BD008A8390 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		7DF8F2F823D4DAF9008A8390 /* BottomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCard.swift; sourceTree = "<group>"; };
+		7DF8F2FA23D4E1C6008A8390 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 		7D3A759023CFA3380008E73C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7DF8F2FA23D4E1C6008A8390 /* ColorExtension.swift */,
 				7D3A758E23CFA3350008E73C /* MKMapViewExtension.swift */,
 			);
 			path = Extensions;
@@ -331,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				7DF8F2F323D371BD008A8390 /* ActivityIndicator.swift */,
+				7DF8F2F823D4DAF9008A8390 /* BottomCard.swift */,
 				7DD14E4423CEB9030084B52A /* ContentView.swift */,
 				7DD14E4B23CEB9060084B52A /* LaunchScreen.storyboard */,
 				7DD14E6223CEB9D20084B52A /* MapView.swift */,
@@ -568,12 +574,14 @@
 			files = (
 				7D3A758F23CFA3350008E73C /* MKMapViewExtension.swift in Sources */,
 				7DD14E4123CEB9030084B52A /* AppDelegate.swift in Sources */,
+				7DF8F2F923D4DAF9008A8390 /* BottomCard.swift in Sources */,
 				7DD14E6323CEB9D20084B52A /* MapView.swift in Sources */,
 				7DD14E4323CEB9030084B52A /* SceneDelegate.swift in Sources */,
 				7DF8F2F423D371BD008A8390 /* ActivityIndicator.swift in Sources */,
 				7DD14E4523CEB9030084B52A /* ContentView.swift in Sources */,
 				7D5C48E123D02BB400F271A5 /* RoadConditionsView.swift in Sources */,
 				7DEA508E23CFA82100C98255 /* RoadConditionsViewModel.swift in Sources */,
+				7DF8F2FB23D4E1C6008A8390 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
