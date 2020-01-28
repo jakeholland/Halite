@@ -6,6 +6,7 @@ import UIKit
 struct MapView: UIViewRepresentable {
     
     @Binding var centerCoordinate: CLLocationCoordinate2D
+    @Binding var region: MKCoordinateRegion
     @Binding var roadConditionsSegments: [RoadConditionsMultiPolyline]
     @Binding var roadConditionsRegions: [RoadConditionsMultiPolygon]
     
@@ -49,6 +50,7 @@ struct MapView: UIViewRepresentable {
 
         func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
             parent.centerCoordinate = mapView.centerCoordinate
+            parent.region = mapView.region
         }
         
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
@@ -76,9 +78,11 @@ struct MapView: UIViewRepresentable {
 
 struct MapView_Previews: PreviewProvider {
     static var exampleCoodinate: CLLocationCoordinate2D = .init(latitude: 51.5, longitude: -0.13)
+    static var exampleRegion: MKCoordinateRegion = .init(center: exampleCoodinate, span: .init(latitudeDelta: 50, longitudeDelta: 50))
     
     static var previews: some View {
         MapView(centerCoordinate: .constant(exampleCoodinate),
+                region: .constant(exampleRegion),
                 roadConditionsSegments: .constant([]),
                 roadConditionsRegions: .constant([]))
     }

@@ -5,6 +5,7 @@ import RoadConditionsService
 final class RoadConditionsViewModel: ObservableObject {
     
     @Published var centerCoordinate = CLLocationCoordinate2D()
+    @Published var region = MKCoordinateRegion()
     @Published var roadConditionsSegments: [RoadConditionsMultiPolyline] = []
     @Published var roadConditionsRegions: [RoadConditionsMultiPolygon] = []
     @Published var isLoading: Bool = false
@@ -18,7 +19,7 @@ final class RoadConditionsViewModel: ObservableObject {
     
     func loadRoadConditions() {
         isLoading = true
-        roadConditionsService.getRoadConditions { result in
+        roadConditionsService.getRoadConditions(in: region) { result in
             self.isLoading = false
             switch result {
             case .success(let roadConditionsSegments, let roadConditionsRegions):

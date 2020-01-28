@@ -11,6 +11,7 @@ struct RoadConditionsView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             MapView(centerCoordinate: $viewModel.centerCoordinate,
+                    region: $viewModel.region,
                     roadConditionsSegments: $viewModel.roadConditionsSegments,
                     roadConditionsRegions: $viewModel.roadConditionsRegions)
                 .onAppear { self.viewModel.loadRoadConditions() }
