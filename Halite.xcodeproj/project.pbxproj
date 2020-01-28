@@ -111,7 +111,7 @@
 		7DCCC30C23CFF1D700C32068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DCCC31B23CFF23F00C32068 /* RoadConditionsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsServiceProtocol.swift; sourceTree = "<group>"; };
 		7DCCC31D23CFF25D00C32068 /* RoadConditionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsService.swift; sourceTree = "<group>"; };
-		7DD14E3D23CEB9030084B52A /* Road Conditions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Road Conditions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DD14E3D23CEB9030084B52A /* Halite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Halite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD14E4023CEB9030084B52A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DD14E4223CEB9030084B52A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7DD14E4423CEB9030084B52A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,11 +119,11 @@
 		7DD14E4923CEB9060084B52A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7DD14E4C23CEB9060084B52A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DD14E4E23CEB9060084B52A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7DD14E5323CEB9060084B52A /* Road ConditionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Road ConditionsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DD14E5323CEB9060084B52A /* Halite Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Halite Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD14E5723CEB9060084B52A /* Road_ConditionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Road_ConditionsTests.swift; sourceTree = "<group>"; };
 		7DD14E5923CEB9060084B52A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DD14E6223CEB9D20084B52A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		7DD14E6623CEBB440084B52A /* Road Conditions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Road Conditions.entitlements"; sourceTree = "<group>"; };
+		7DD14E6623CEBB440084B52A /* Halite.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Halite.entitlements; sourceTree = "<group>"; };
 		7DEA508D23CFA82100C98255 /* RoadConditionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsViewModel.swift; sourceTree = "<group>"; };
 		7DF8F2F323D371BD008A8390 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		7DF8F2F823D4DAF9008A8390 /* BottomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCard.swift; sourceTree = "<group>"; };
@@ -280,8 +280,8 @@
 		7DD14E3423CEB9030084B52A = {
 			isa = PBXGroup;
 			children = (
-				7DD14E3F23CEB9030084B52A /* Road Conditions */,
-				7DD14E5623CEB9060084B52A /* Road ConditionsTests */,
+				7DD14E3F23CEB9030084B52A /* Halite */,
+				7DD14E5623CEB9060084B52A /* Halite Tests */,
 				7DCCC2FC23CFF1D600C32068 /* RoadConditionsService */,
 				7DCCC30923CFF1D700C32068 /* RoadConditionsServiceTests */,
 				7DD14E3E23CEB9030084B52A /* Products */,
@@ -291,15 +291,15 @@
 		7DD14E3E23CEB9030084B52A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7DD14E3D23CEB9030084B52A /* Road Conditions.app */,
-				7DD14E5323CEB9060084B52A /* Road ConditionsTests.xctest */,
+				7DD14E3D23CEB9030084B52A /* Halite.app */,
+				7DD14E5323CEB9060084B52A /* Halite Tests.xctest */,
 				7DCCC2FB23CFF1D600C32068 /* RoadConditionsService.framework */,
 				7DCCC30323CFF1D700C32068 /* RoadConditionsServiceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7DD14E3F23CEB9030084B52A /* Road Conditions */ = {
+		7DD14E3F23CEB9030084B52A /* Halite */ = {
 			isa = PBXGroup;
 			children = (
 				7DD14E4023CEB9030084B52A /* AppDelegate.swift */,
@@ -311,7 +311,7 @@
 				7DEA508C23CFA80A00C98255 /* View Models */,
 				7DD14E6423CEBADD0084B52A /* Views */,
 			);
-			path = "Road Conditions";
+			path = Halite;
 			sourceTree = "<group>";
 		};
 		7DD14E4823CEB9060084B52A /* Preview Content */ = {
@@ -322,13 +322,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		7DD14E5623CEB9060084B52A /* Road ConditionsTests */ = {
+		7DD14E5623CEB9060084B52A /* Halite Tests */ = {
 			isa = PBXGroup;
 			children = (
 				7DD14E5723CEB9060084B52A /* Road_ConditionsTests.swift */,
 				7DD14E5923CEB9060084B52A /* Info.plist */,
 			);
-			path = "Road ConditionsTests";
+			path = "Halite Tests";
 			sourceTree = "<group>";
 		};
 		7DD14E6423CEBADD0084B52A /* Views */ = {
@@ -349,7 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				7DD14E4E23CEB9060084B52A /* Info.plist */,
-				7DD14E6623CEBB440084B52A /* Road Conditions.entitlements */,
+				7DD14E6623CEBB440084B52A /* Halite.entitlements */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -415,9 +415,9 @@
 			productReference = 7DCCC30323CFF1D700C32068 /* RoadConditionsServiceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7DD14E3C23CEB9030084B52A /* Road Conditions */ = {
+		7DD14E3C23CEB9030084B52A /* Halite */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7DD14E5C23CEB9060084B52A /* Build configuration list for PBXNativeTarget "Road Conditions" */;
+			buildConfigurationList = 7DD14E5C23CEB9060084B52A /* Build configuration list for PBXNativeTarget "Halite" */;
 			buildPhases = (
 				7DD14E3923CEB9030084B52A /* Sources */,
 				7DD14E3A23CEB9030084B52A /* Frameworks */,
@@ -429,14 +429,14 @@
 			dependencies = (
 				7DCCC30F23CFF1D700C32068 /* PBXTargetDependency */,
 			);
-			name = "Road Conditions";
+			name = Halite;
 			productName = "Road Conditions";
-			productReference = 7DD14E3D23CEB9030084B52A /* Road Conditions.app */;
+			productReference = 7DD14E3D23CEB9030084B52A /* Halite.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7DD14E5223CEB9060084B52A /* Road ConditionsTests */ = {
+		7DD14E5223CEB9060084B52A /* Halite Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7DD14E5F23CEB9060084B52A /* Build configuration list for PBXNativeTarget "Road ConditionsTests" */;
+			buildConfigurationList = 7DD14E5F23CEB9060084B52A /* Build configuration list for PBXNativeTarget "Halite Tests" */;
 			buildPhases = (
 				7DD14E4F23CEB9060084B52A /* Sources */,
 				7DD14E5023CEB9060084B52A /* Frameworks */,
@@ -447,9 +447,9 @@
 			dependencies = (
 				7DD14E5523CEB9060084B52A /* PBXTargetDependency */,
 			);
-			name = "Road ConditionsTests";
+			name = "Halite Tests";
 			productName = "Road ConditionsTests";
-			productReference = 7DD14E5323CEB9060084B52A /* Road ConditionsTests.xctest */;
+			productReference = 7DD14E5323CEB9060084B52A /* Halite Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -479,7 +479,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7DD14E3823CEB9030084B52A /* Build configuration list for PBXProject "Road Conditions" */;
+			buildConfigurationList = 7DD14E3823CEB9030084B52A /* Build configuration list for PBXProject "Halite" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -495,8 +495,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7DD14E3C23CEB9030084B52A /* Road Conditions */,
-				7DD14E5223CEB9060084B52A /* Road ConditionsTests */,
+				7DD14E3C23CEB9030084B52A /* Halite */,
+				7DD14E5223CEB9060084B52A /* Halite Tests */,
 				7DCCC2FA23CFF1D600C32068 /* RoadConditionsService */,
 				7DCCC30223CFF1D700C32068 /* RoadConditionsServiceTests */,
 			);
@@ -603,7 +603,7 @@
 		};
 		7DCCC30823CFF1D700C32068 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7DD14E3C23CEB9030084B52A /* Road Conditions */;
+			target = 7DD14E3C23CEB9030084B52A /* Halite */;
 			targetProxy = 7DCCC30723CFF1D700C32068 /* PBXContainerItemProxy */;
 		};
 		7DCCC30F23CFF1D700C32068 /* PBXTargetDependency */ = {
@@ -613,7 +613,7 @@
 		};
 		7DD14E5523CEB9060084B52A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7DD14E3C23CEB9030084B52A /* Road Conditions */;
+			target = 7DD14E3C23CEB9030084B52A /* Halite */;
 			targetProxy = 7DD14E5423CEB9060084B52A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -703,7 +703,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Road Conditions.app/Road Conditions";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Halite.app/Halite";
 			};
 			name = Debug;
 		};
@@ -723,7 +723,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Road Conditions.app/Road Conditions";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Halite.app/Halite";
 			};
 			name = Release;
 		};
@@ -846,19 +846,19 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Road Conditions/Supporting Files/Road Conditions.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Halite/Supporting Files/Halite.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Road Conditions/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Halite/Preview Content\"";
 				DEVELOPMENT_TEAM = SU4T96VBX6;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Road Conditions/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Halite/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jakeholland.Road-Conditions";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakeholland.halite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -871,19 +871,19 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Road Conditions/Supporting Files/Road Conditions.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Halite/Supporting Files/Halite.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Road Conditions/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Halite/Preview Content\"";
 				DEVELOPMENT_TEAM = SU4T96VBX6;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Road Conditions/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Halite/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jakeholland.Road-Conditions";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakeholland.halite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -898,18 +898,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SU4T96VBX6;
-				INFOPLIST_FILE = "Road ConditionsTests/Info.plist";
+				INFOPLIST_FILE = "Halite Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jakeholland.Road-ConditionsTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakeholland.HaliteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Road Conditions.app/Road Conditions";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Halite.app/Halite";
 			};
 			name = Debug;
 		};
@@ -920,18 +920,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SU4T96VBX6;
-				INFOPLIST_FILE = "Road ConditionsTests/Info.plist";
+				INFOPLIST_FILE = "Halite Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jakeholland.Road-ConditionsTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jakeholland.HaliteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Road Conditions.app/Road Conditions";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Halite.app/Halite";
 			};
 			name = Release;
 		};
@@ -956,7 +956,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7DD14E3823CEB9030084B52A /* Build configuration list for PBXProject "Road Conditions" */ = {
+		7DD14E3823CEB9030084B52A /* Build configuration list for PBXProject "Halite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DD14E5A23CEB9060084B52A /* Debug */,
@@ -965,7 +965,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7DD14E5C23CEB9060084B52A /* Build configuration list for PBXNativeTarget "Road Conditions" */ = {
+		7DD14E5C23CEB9060084B52A /* Build configuration list for PBXNativeTarget "Halite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DD14E5D23CEB9060084B52A /* Debug */,
@@ -974,7 +974,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7DD14E5F23CEB9060084B52A /* Build configuration list for PBXNativeTarget "Road ConditionsTests" */ = {
+		7DD14E5F23CEB9060084B52A /* Build configuration list for PBXNativeTarget "Halite Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DD14E6023CEB9060084B52A /* Debug */,
