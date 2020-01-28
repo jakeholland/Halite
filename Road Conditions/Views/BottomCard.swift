@@ -1,14 +1,22 @@
 import SwiftUI
 
+extension AnyTransition {
+    static var moveInOut: AnyTransition {
+        let insertion = AnyTransition.move(edge: .bottom)
+        let removal = AnyTransition.move(edge: .top)
+        return .asymmetric(insertion: insertion, removal: removal)
+    }
+}
+
 struct BottomCard<Content: View> : View {
+
     var content: () -> Content
     var body: some View {
         content()
-            .frame(width: UIScreen.main.bounds.width, height: 140)
-            .background(Color.white)
+            .frame(width: UIScreen.main.bounds.width, height: 160)
+            .background(Color(UIColor.systemBackground))
             .cornerRadius(10)
             .shadow(radius: 10)
-            .animation(.interpolatingSpring(stiffness: 300, damping: 30, initialVelocity: 10))
-            .transition(.move(edge: .bottom))
+            .transition(.moveInOut)
     }
 }

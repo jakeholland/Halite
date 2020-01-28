@@ -13,6 +13,9 @@ struct MapView: UIViewRepresentable {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
         mapView.isRotateEnabled = false
+        mapView.showsUserLocation = true
+        mapView.showsTraffic = true
+        mapView.showsBuildings = false
 
         return mapView
     }

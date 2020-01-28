@@ -11,15 +11,16 @@ struct MapButtons: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            Button(action: { self.loadRoadConditions() }) {
-                if isCentered {
-                    Image(systemName: "location.fill")
-                } else {
-                    Image(systemName: "location")
-                }
-            }.frame(height: size)
-            
-            Divider()
+//            Button(action: loadRoadConditions) {
+//                if isCentered {
+//                    Image(systemName: "location.fill")
+//                } else {
+//                    Image(systemName: "location")
+//                }
+//            }
+//            .frame(width: size, height: size)
+//
+//            Divider()
             
             Button(action: loadRoadConditions) {
                 if isLoading {
@@ -28,27 +29,29 @@ struct MapButtons: View {
                     Image(systemName: "arrow.2.circlepath")
                 }
             }
-            .frame(height: size)
+            .frame(width: size, height: size)
             .disabled(isLoading)
             
             Divider()
 
-            Button(action: { self.showLegend.toggle() }) {
+            Button(action: {
+                withAnimation() {
+                    self.showLegend.toggle()
+                }
+            }) {
                 if showLegend {
                     Image(systemName: "info.circle.fill")
                 } else {
                     Image(systemName: "info.circle")
                 }
-            }.frame(height: size)
+            }
+            .frame(width: size, height: size)
         }
         .frame(width: size)
-        .background(Color.white)
-        .cornerRadius(8)
-        .overlay(
-            RoundedRectangle(cornerRadius: 8)
-                .stroke(Color.blue, lineWidth: 0.5)
-        )
-        .shadow(radius: 10)
+        .background(Color(UIColor.systemBackground))
+        .cornerRadius(10)
+        .shadow(radius: 6)
+        .font(Font.system(size: 22).weight(.regular))
     }
 }
 
