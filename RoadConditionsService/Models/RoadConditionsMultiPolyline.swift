@@ -4,12 +4,8 @@ public final class RoadConditionsMultiPolyline: MKMultiPolyline {
     public let roadConditions: RoadConditions
     
     init?(_ geoJsonFeature: MKGeoJSONFeature) {
-        guard
-            let properties = geoJsonFeature.properties,
-            let conditions = try? JSONDecoder().decode(IllinoisWinterRoadConditionsResponse.self, from: properties),
-            let roadConditionsString = conditions.Cond_Desc,
-            let roadConditions = RoadConditions(rawValue: roadConditionsString)
-            else { return nil }
+        guard let roadConditions = RoadConditions(from: geoJsonFeature) else { return nil }
+        
         self.roadConditions = roadConditions
         
         let polylines = geoJsonFeature.geometry.compactMap { $0 as? MKPolyline }
@@ -26,4 +22,23 @@ public final class RoadConditionsMultiPolyline: MKMultiPolyline {
 
 public extension Array where Element == RoadConditionsMultiPolyline {
     var polylines: [MKPolyline] { flatMap { $0.polylines } }
+}
+
+private extension RoadConditions {
+    init?(from geoJsonFeature: MKGeoJSONFeature) {
+        guard
+            let properties = geoJsonFeature.properties,
+            let conditions = try? JSONDecoder().decode(MidwestWinterRoadConditionsResponse.self, from: properties),
+            let roadConditionsInt = conditions.ROAD_CONDITION
+            else { return nil }
+        
+        switch roadConditionsInt {
+        case 0:
+            self = .clear
+        case 1:
+            self = .partlyCovered
+        default:
+            return nil
+        }
+    }
 }

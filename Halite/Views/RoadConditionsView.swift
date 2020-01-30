@@ -12,8 +12,7 @@ struct RoadConditionsView: View {
         ZStack(alignment: .bottom) {
             MapView(centerCoordinate: $viewModel.centerCoordinate,
                     region: $viewModel.region,
-                    roadConditionsSegments: $viewModel.roadConditionsSegments,
-                    roadConditionsRegions: $viewModel.roadConditionsRegions)
+                    roadConditionsSegments: $viewModel.roadConditionsSegments)
                 .onAppear { self.viewModel.loadRoadConditions() }
             
             GeometryReader { geometry in
@@ -30,8 +29,9 @@ struct RoadConditionsView: View {
                     VStack(alignment: .leading) {
                         RoadConditions.clear.view
                         RoadConditions.partlyCovered.view
-                        RoadConditions.mostlyCovered.view
                         RoadConditions.covered.view
+                        RoadConditions.travelNotAdvised.view
+                        RoadConditions.impassable.view
                         Spacer()
                     }.padding()
                 }
