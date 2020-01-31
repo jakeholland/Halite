@@ -7,7 +7,8 @@ public struct RoadConditionsService: RoadConditionsServiceProtocol {
 
     public func getRoadConditions(in region: MKCoordinateRegion, completion: @escaping (Swift.Result<([RoadConditionsMultiPolyline]), Error>) -> Void) {
         let roadConditionsPromises: [Promise<[RoadConditionsMultiPolyline]>] = [
-            getMidwestRoadConditions(in: region)
+            getMidwestRoadConditions(in: region),
+            getIowaRoadConditions(in: region)
         ]
         
         when(fulfilled: roadConditionsPromises).done { roadConditionsSegments in
@@ -22,9 +23,10 @@ public struct RoadConditionsService: RoadConditionsServiceProtocol {
 // MARK: Private
 
 private extension RoadConditionsService {
-    func getMidwestRoadConditions(in region: MKCoordinateRegion) -> Promise<[RoadConditionsMultiPolyline]> {
+    
+    func getIowaRoadConditions(in region: MKCoordinateRegion) -> Promise<[RoadConditionsMultiPolyline]> {
         Promise { seal in
-            let components: ArcGISRouter = .getMidwestRoadConditions
+            let components: ArcGISRouter = .getIowaRoadConditions
             guard let request = components.urlRequest else {
                 seal.reject(RoadConditionsError.unknown)
                 return
@@ -34,8 +36,30 @@ private extension RoadConditionsService {
                 request.responseGeoJsonDecoable()
             }.done { mkGeoJsonArray in
                 let roadConditionsSegments = mkGeoJsonArray
-                                                .compactMap { $0 as? MKGeoJSONFeature }
-                                                .compactMap { RoadConditionsMultiPolyline($0) }
+                    .compactMap { $0 as? MKGeoJSONFeature }
+                    .compactMap { IowaWinterRoadConditionsResponse.polyline(from: $0) }
+                seal.fulfill(roadConditionsSegments)
+            }.catch { error in
+                seal.reject(error)
+            }
+        }
+    }
+    
+    func getMidwestRoadConditions(in region: MKCoordinateRegion) -> Promise<[RoadConditionsMultiPolyline]> {
+        Promise { seal in
+            let components: ArcGISRouter = .getMidwestRoadConditions
+            guard let request = components.urlRequest else {
+                seal.reject(RoadConditionsError.unknown)
+                return
+            }
+            
+            firstly {
+                request
+                    .responseGeoJsonDecoable()
+            }.done { mkGeoJsonArray in
+                let roadConditionsSegments = mkGeoJsonArray
+                    .compactMap { $0 as? MKGeoJSONFeature }
+                    .compactMap { MidwestWinterRoadConditionsResponse.polyline(from: $0) }
                 seal.fulfill(roadConditionsSegments)
             }.catch { error in
                 seal.reject(error)
@@ -46,19 +70,19 @@ private extension RoadConditionsService {
 
 // MARK: Mock Data
 
-private extension RoadConditionsService {
-    func loadMockRoadConditionsSegments() -> [RoadConditionsMultiPolyline] {
-        let geoJSONDecoder = MKGeoJSONDecoder()
-        guard
-            let geoJson = geoJsonData(for: "Test_Road_Conditions"),
-            let roadConditions = try? geoJSONDecoder.decode(geoJson)
-            else { return [] }
-        
-        return roadConditions.compactMap { $0 as? MKGeoJSONFeature }.compactMap { RoadConditionsMultiPolyline($0) }
-    }
-    
-    func geoJsonData(for localFileName: String) -> Data? {
-        guard let path = Bundle.main.path(forResource: localFileName, ofType: "geojson") else { return nil }
-        return try? Data(contentsOf: URL(fileURLWithPath: path))
-    }
-}
+//private extension RoadConditionsService {
+//    func loadMockRoadConditionsSegments() -> [RoadConditionsMultiPolyline] {
+//        let geoJSONDecoder = MKGeoJSONDecoder()
+//        guard
+//            let geoJson = geoJsonData(for: "Test_Road_Conditions"),
+//            let roadConditions = try? geoJSONDecoder.decode(geoJson)
+//            else { return [] }
+//
+//        return roadConditions.compactMap { $0 as? MKGeoJSONFeature }.compactMap { RoadConditionsMultiPolyline($0) }
+//    }
+//
+//    func geoJsonData(for localFileName: String) -> Data? {
+//        guard let path = Bundle.main.path(forResource: localFileName, ofType: "geojson") else { return nil }
+//        return try? Data(contentsOf: URL(fileURLWithPath: path))
+//    }
+//}
