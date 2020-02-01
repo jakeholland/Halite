@@ -9,7 +9,7 @@ public enum RoadConditions: String, CaseIterable {
 }
 
 public extension RoadConditions {
-    var lineColor: UIColor? {
+    var color: UIColor? {
         switch self {
         case .clear:
             return .systemGreen
@@ -23,13 +23,11 @@ public extension RoadConditions {
             return .black
         }
     }
-    
-    var regionColor: UIColor? { lineColor?.withAlphaComponent(0.5) }
-    
+
     var view: some View {
         HStack {
             Rectangle()
-                .fill(Color(lineColor ?? .clear))
+                .fill(Color(color ?? .clear))
                 .frame(width: 40, height: 20)
                 .cornerRadius(2)
             Text(rawValue)

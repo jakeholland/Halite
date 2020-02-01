@@ -5,23 +5,22 @@ import SwiftUI
 struct RoadConditionsView: View {
     
     @ObservedObject var viewModel = RoadConditionsViewModel()
-    @State private var xPosition: CGFloat = 0
     @State private var showLegend: Bool = true
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            MapView(centerCoordinate: $viewModel.centerCoordinate,
-                    region: $viewModel.region,
-                    roadConditionsSegments: $viewModel.roadConditionsSegments)
+            MapView(region: $viewModel.region,
+                    roadConditionsSegments: $viewModel.roadConditionsSegments,
+                    isCenteredOnUser: $viewModel.isCenteredOnUser)
                 .onAppear { self.viewModel.loadRoadConditions() }
             
             GeometryReader { geometry in
                 MapButtons(showLegend: self.$showLegend,
                            isLoading: self.$viewModel.isLoading,
-                           isCentered: self.$viewModel.isCentered,
+                           isCenteredOnUser: self.$viewModel.isCenteredOnUser,
                            loadRoadConditions: self.viewModel.loadRoadConditions)
                 .offset(x: (geometry.size.width / 2) - 40,
-                        y: -(geometry.size.height / 2) + 120)
+                        y: -(geometry.size.height / 2) + 150)
             }
             
             if showLegend {

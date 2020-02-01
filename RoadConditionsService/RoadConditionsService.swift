@@ -54,8 +54,7 @@ private extension RoadConditionsService {
             }
             
             firstly {
-                request
-                    .responseGeoJsonDecoable()
+                request.responseGeoJsonDecoable()
             }.done { mkGeoJsonArray in
                 let roadConditionsSegments = mkGeoJsonArray
                     .compactMap { $0 as? MKGeoJSONFeature }

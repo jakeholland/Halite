@@ -4,11 +4,10 @@ import RoadConditionsService
 
 final class RoadConditionsViewModel: ObservableObject {
     
-    @Published var centerCoordinate = CLLocationCoordinate2D()
     @Published var region = MKCoordinateRegion()
-    @Published var roadConditionsSegments: [RoadConditionsMultiPolyline] = []
     @Published var isLoading: Bool = false
-    @Published var isCentered: Bool = false
+    @Published var isCenteredOnUser: Bool = true
+    @Published var roadConditionsSegments: [RoadConditionsMultiPolyline] = []
     
     private let roadConditionsService: RoadConditionsServiceProtocol
 
