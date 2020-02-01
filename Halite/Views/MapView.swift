@@ -16,6 +16,7 @@ struct MapView: UIViewRepresentable {
         mapView.showsUserLocation = true
         mapView.showsTraffic = true
         mapView.showsBuildings = false
+        mapView.isPitchEnabled = false
 
         return mapView
     }

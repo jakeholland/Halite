@@ -26,7 +26,7 @@ private extension RoadConditionsService {
     
     func getIowaRoadConditions(in region: MKCoordinateRegion) -> Promise<[RoadConditionsMultiPolyline]> {
         Promise { seal in
-            let components: ArcGISRouter = .getIowaRoadConditions
+            let components: ArcGISRouter = .getIowaRoadConditions(in: region)
             guard let request = components.urlRequest else {
                 seal.reject(RoadConditionsError.unknown)
                 return
@@ -47,7 +47,7 @@ private extension RoadConditionsService {
     
     func getMidwestRoadConditions(in region: MKCoordinateRegion) -> Promise<[RoadConditionsMultiPolyline]> {
         Promise { seal in
-            let components: ArcGISRouter = .getMidwestRoadConditions
+            let components: ArcGISRouter = .getMidwestRoadConditions(in: region)
             guard let request = components.urlRequest else {
                 seal.reject(RoadConditionsError.unknown)
                 return
