@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7D3A758F23CFA3350008E73C /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A758E23CFA3350008E73C /* MKMapViewExtension.swift */; };
+		7D427E0123E35CB5003AB3D2 /* MidwestWinterRoadConditionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0023E35CB5003AB3D2 /* MidwestWinterRoadConditionsResponse.swift */; };
+		7D427E0323E3AC44003AB3D2 /* IowaWinterRoadConditionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0223E3AC44003AB3D2 /* IowaWinterRoadConditionsResponse.swift */; };
+		7D427E0623E4F232003AB3D2 /* UserLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0523E4F232003AB3D2 /* UserLocationManager.swift */; };
+		7D427E0823E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0723E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift */; };
+		7D427E0A23E7505F003AB3D2 /* MKCoordinateRegionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0923E7505F003AB3D2 /* MKCoordinateRegionExtension.swift */; };
 		7D5C48CE23CFF52A00F271A5 /* EndpointRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48CD23CFF52A00F271A5 /* EndpointRouter.swift */; };
 		7D5C48D023CFF54D00F271A5 /* RequestComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48CF23CFF54D00F271A5 /* RequestComponents.swift */; };
 		7D5C48D323CFF64D00F271A5 /* ArcGISEndpointRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48D223CFF64D00F271A5 /* ArcGISEndpointRouter.swift */; };
@@ -15,15 +20,12 @@
 		7D5C48DC23CFF7D700F271A5 /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48DB23CFF7D700F271A5 /* URLRequestExtension.swift */; };
 		7D5C48DE23CFF7F400F271A5 /* RoadConditionsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48DD23CFF7F400F271A5 /* RoadConditionsError.swift */; };
 		7D5C48E123D02BB400F271A5 /* RoadConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48E023D02BB400F271A5 /* RoadConditionsView.swift */; };
-		7D5C48E323D28BB900F271A5 /* RoadConditionsMultiPolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48E223D28BB900F271A5 /* RoadConditionsMultiPolygon.swift */; };
-		7D5C48E523D28CDD00F271A5 /* IllinoisCountyWinterRoadConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48E423D28CDD00F271A5 /* IllinoisCountyWinterRoadConditions.swift */; };
 		7DCCC30423CFF1D700C32068 /* RoadConditionsService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCCC2FB23CFF1D600C32068 /* RoadConditionsService.framework */; };
 		7DCCC30B23CFF1D700C32068 /* RoadConditionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCC30A23CFF1D700C32068 /* RoadConditionsServiceTests.swift */; };
 		7DCCC31023CFF1D700C32068 /* RoadConditionsService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCCC2FB23CFF1D600C32068 /* RoadConditionsService.framework */; };
 		7DCCC31123CFF1D700C32068 /* RoadConditionsService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCCC2FB23CFF1D600C32068 /* RoadConditionsService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DCCC31C23CFF23F00C32068 /* RoadConditionsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCC31B23CFF23F00C32068 /* RoadConditionsServiceProtocol.swift */; };
 		7DCCC31E23CFF25D00C32068 /* RoadConditionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCC31D23CFF25D00C32068 /* RoadConditionsService.swift */; };
-		7DCCC31F23CFF28800C32068 /* IllinoisWinterRoadConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7FBC223CF81D8002D443B /* IllinoisWinterRoadConditions.swift */; };
 		7DCCC32023CFF28800C32068 /* RoadConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7FBC423CF91AB002D443B /* RoadConditions.swift */; };
 		7DCCC32123CFF28800C32068 /* RoadConditionsMultiPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7FBC623CF91E4002D443B /* RoadConditionsMultiPolyline.swift */; };
 		7DD14E4123CEB9030084B52A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD14E4023CEB9030084B52A /* AppDelegate.swift */; };
@@ -90,6 +92,11 @@
 		7D20A38723CF75C300503D60 /* Test_County_Conditions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Test_County_Conditions.geojson; path = "../../Road Conditions/Test_County_Conditions.geojson"; sourceTree = "<group>"; };
 		7D20A38823CF75C300503D60 /* Test_Road_Conditions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Test_Road_Conditions.geojson; path = "../../Road Conditions/Test_Road_Conditions.geojson"; sourceTree = "<group>"; };
 		7D3A758E23CFA3350008E73C /* MKMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
+		7D427E0023E35CB5003AB3D2 /* MidwestWinterRoadConditionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidwestWinterRoadConditionsResponse.swift; sourceTree = "<group>"; };
+		7D427E0223E3AC44003AB3D2 /* IowaWinterRoadConditionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IowaWinterRoadConditionsResponse.swift; sourceTree = "<group>"; };
+		7D427E0523E4F232003AB3D2 /* UserLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationManager.swift; sourceTree = "<group>"; };
+		7D427E0723E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtension.swift; sourceTree = "<group>"; };
+		7D427E0923E7505F003AB3D2 /* MKCoordinateRegionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionExtension.swift; sourceTree = "<group>"; };
 		7D5C48CD23CFF52A00F271A5 /* EndpointRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointRouter.swift; sourceTree = "<group>"; };
 		7D5C48CF23CFF54D00F271A5 /* RequestComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestComponents.swift; sourceTree = "<group>"; };
 		7D5C48D223CFF64D00F271A5 /* ArcGISEndpointRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcGISEndpointRouter.swift; sourceTree = "<group>"; };
@@ -97,9 +104,6 @@
 		7D5C48DB23CFF7D700F271A5 /* URLRequestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
 		7D5C48DD23CFF7F400F271A5 /* RoadConditionsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsError.swift; sourceTree = "<group>"; };
 		7D5C48E023D02BB400F271A5 /* RoadConditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsView.swift; sourceTree = "<group>"; };
-		7D5C48E223D28BB900F271A5 /* RoadConditionsMultiPolygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsMultiPolygon.swift; sourceTree = "<group>"; };
-		7D5C48E423D28CDD00F271A5 /* IllinoisCountyWinterRoadConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllinoisCountyWinterRoadConditions.swift; sourceTree = "<group>"; };
-		7DA7FBC223CF81D8002D443B /* IllinoisWinterRoadConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllinoisWinterRoadConditions.swift; sourceTree = "<group>"; };
 		7DA7FBC423CF91AB002D443B /* RoadConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoadConditions.swift; path = ../Routers/RoadConditions.swift; sourceTree = "<group>"; };
 		7DA7FBC623CF91E4002D443B /* RoadConditionsMultiPolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsMultiPolyline.swift; sourceTree = "<group>"; };
 		7DCCC2FB23CFF1D600C32068 /* RoadConditionsService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RoadConditionsService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,9 +170,18 @@
 		7D3A759023CFA3380008E73C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7D427E0723E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift */,
 				7D3A758E23CFA3350008E73C /* MKMapViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7D427E0423E4F213003AB3D2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7D427E0523E4F232003AB3D2 /* UserLocationManager.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		7D5C48D123CFF56D00F271A5 /* Network */ = {
@@ -184,8 +197,8 @@
 		7D5C48D623CFF72300F271A5 /* Response Models */ = {
 			isa = PBXGroup;
 			children = (
-				7D5C48E423D28CDD00F271A5 /* IllinoisCountyWinterRoadConditions.swift */,
-				7DA7FBC223CF81D8002D443B /* IllinoisWinterRoadConditions.swift */,
+				7D427E0023E35CB5003AB3D2 /* MidwestWinterRoadConditionsResponse.swift */,
+				7D427E0223E3AC44003AB3D2 /* IowaWinterRoadConditionsResponse.swift */,
 			);
 			path = "Response Models";
 			sourceTree = "<group>";
@@ -205,7 +218,6 @@
 			children = (
 				7DA7FBC423CF91AB002D443B /* RoadConditions.swift */,
 				7D5C48DD23CFF7F400F271A5 /* RoadConditionsError.swift */,
-				7D5C48E223D28BB900F271A5 /* RoadConditionsMultiPolygon.swift */,
 				7DA7FBC623CF91E4002D443B /* RoadConditionsMultiPolyline.swift */,
 			);
 			path = Models;
@@ -223,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				7D5C48DB23CFF7D700F271A5 /* URLRequestExtension.swift */,
+				7D427E0923E7505F003AB3D2 /* MKCoordinateRegionExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -303,6 +316,7 @@
 				7DD14E4023CEB9030084B52A /* AppDelegate.swift */,
 				7DD14E4223CEB9030084B52A /* SceneDelegate.swift */,
 				7DD14E4623CEB9060084B52A /* Assets.xcassets */,
+				7D427E0423E4F213003AB3D2 /* Helpers */,
 				7D3A759023CFA3380008E73C /* Extensions */,
 				7DD14E4823CEB9060084B52A /* Preview Content */,
 				7DD14E6523CEBB1E0084B52A /* Supporting Files */,
@@ -336,9 +350,9 @@
 				7DF8F2F823D4DAF9008A8390 /* BottomCard.swift */,
 				7DD14E4423CEB9030084B52A /* ContentView.swift */,
 				7DF8F2FC23D4EC13008A8390 /* MapButtons.swift */,
-				7DD14E4B23CEB9060084B52A /* LaunchScreen.storyboard */,
 				7DD14E6223CEB9D20084B52A /* MapView.swift */,
 				7D5C48E023D02BB400F271A5 /* RoadConditionsView.swift */,
+				7DD14E4B23CEB9060084B52A /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -547,12 +561,12 @@
 				7DCCC31C23CFF23F00C32068 /* RoadConditionsServiceProtocol.swift in Sources */,
 				7DCCC32123CFF28800C32068 /* RoadConditionsMultiPolyline.swift in Sources */,
 				7D5C48D023CFF54D00F271A5 /* RequestComponents.swift in Sources */,
-				7DCCC31F23CFF28800C32068 /* IllinoisWinterRoadConditions.swift in Sources */,
+				7D427E0123E35CB5003AB3D2 /* MidwestWinterRoadConditionsResponse.swift in Sources */,
 				7DCCC31E23CFF25D00C32068 /* RoadConditionsService.swift in Sources */,
-				7D5C48E523D28CDD00F271A5 /* IllinoisCountyWinterRoadConditions.swift in Sources */,
-				7D5C48E323D28BB900F271A5 /* RoadConditionsMultiPolygon.swift in Sources */,
+				7D427E0323E3AC44003AB3D2 /* IowaWinterRoadConditionsResponse.swift in Sources */,
 				7DCCC32023CFF28800C32068 /* RoadConditions.swift in Sources */,
 				7D5C48CE23CFF52A00F271A5 /* EndpointRouter.swift in Sources */,
+				7D427E0A23E7505F003AB3D2 /* MKCoordinateRegionExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +588,8 @@
 				7DD14E6323CEB9D20084B52A /* MapView.swift in Sources */,
 				7DD14E4323CEB9030084B52A /* SceneDelegate.swift in Sources */,
 				7DF8F2F423D371BD008A8390 /* ActivityIndicator.swift in Sources */,
+				7D427E0623E4F232003AB3D2 /* UserLocationManager.swift in Sources */,
+				7D427E0823E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift in Sources */,
 				7DF8F2FD23D4EC13008A8390 /* MapButtons.swift in Sources */,
 				7DD14E4523CEB9030084B52A /* ContentView.swift in Sources */,
 				7D5C48E123D02BB400F271A5 /* RoadConditionsView.swift in Sources */,
