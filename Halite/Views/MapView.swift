@@ -27,14 +27,12 @@ struct MapView: UIViewRepresentable {
     
     func updateUIView(_ view: MKMapView, context: Context) {
         view.userTrackingMode = isCenteredOnUser ? .follow : .none
-        
-        let currentMultiPolylines = view.overlays.compactMap { $0 as? RoadConditionsMultiPolyline }
-        guard currentMultiPolylines != roadConditionsSegments else { return }
-        
-        context.coordinator.roadConditionsSegments = roadConditionsSegments
-        
-        view.removeAllOverlays()
-        view.addOverlays(roadConditionsSegments)
+
+        if context.coordinator.roadConditionsSegments != roadConditionsSegments {
+            context.coordinator.roadConditionsSegments = roadConditionsSegments
+            view.removeAllOverlays()
+            view.addOverlays(roadConditionsSegments)
+        }
     }
     
     final class Coordinator: NSObject, MKMapViewDelegate {
@@ -75,7 +73,8 @@ struct MapView: UIViewRepresentable {
 
 struct MapView_Previews: PreviewProvider {
     static var exampleCoodinate: CLLocationCoordinate2D = .init(latitude: 51.5, longitude: -0.13)
-    static var exampleRegion: MKCoordinateRegion = .init(center: exampleCoodinate, span: .init(latitudeDelta: 50, longitudeDelta: 50))
+    static var exampleRegion: MKCoordinateRegion = .init(center: exampleCoodinate,
+                                                         span: .init(latitudeDelta: 50, longitudeDelta: 50))
     
     static var previews: some View {
         MapView(region: .constant(exampleRegion),

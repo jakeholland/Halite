@@ -12,8 +12,8 @@ struct BottomCard<Content: View> : View {
     var content: () -> Content
     var body: some View {
         content()
-            .frame(width: UIScreen.main.bounds.width, height: 180)
-            .background(Color(UIColor.systemBackground))
+            .frame(width: UIScreen.main.bounds.width, height: 190)
+            .background(Color(UIColor.secondarySystemBackground))
             .cornerRadius(10)
             .shadow(radius: 10)
             .transition(.moveInOut)

@@ -48,7 +48,7 @@ struct MapButtons: View {
             .frame(width: size, height: size)
         }
         .frame(width: size)
-        .background(Color(UIColor.systemBackground))
+        .background(Color(UIColor.secondarySystemBackground))
         .cornerRadius(10)
         .shadow(radius: 6)
         .font(Font.system(size: 22).weight(.regular))

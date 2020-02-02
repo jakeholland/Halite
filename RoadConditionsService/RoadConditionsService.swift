@@ -11,9 +11,9 @@ public struct RoadConditionsService: RoadConditionsServiceProtocol {
             getIowaRoadConditions(in: region)
         ]
         
-        when(fulfilled: roadConditionsPromises).done { roadConditionsSegments in
-            let roadConditionsMultiPolylines = roadConditionsSegments.flatMap { $0 }
-            completion(.success(roadConditionsMultiPolylines))
+        when(fulfilled: roadConditionsPromises).done { roadConditionsSegmentArray in
+            let roadConditionsSegments = roadConditionsSegmentArray.flatMap { $0 }.simplify()
+            completion(.success(roadConditionsSegments))
         }.catch { error in
             completion(.failure(error))
         }
@@ -23,7 +23,6 @@ public struct RoadConditionsService: RoadConditionsServiceProtocol {
 // MARK: Private
 
 private extension RoadConditionsService {
-    
     func getIowaRoadConditions(in region: MKCoordinateRegion) -> Promise<[RoadConditionsMultiPolyline]> {
         Promise { seal in
             let components: ArcGISRouter = .getIowaRoadConditions(in: region)
