@@ -12,6 +12,7 @@ struct RoadConditionsView: View {
             MapView(region: $viewModel.region,
                     roadConditionsSegments: $viewModel.roadConditionsSegments,
                     isCenteredOnUser: $viewModel.isCenteredOnUser)
+                .zIndex(0)
                 .onAppear { self.viewModel.loadRoadConditions() }
             
             GeometryReader { geometry in
@@ -19,24 +20,24 @@ struct RoadConditionsView: View {
                            isLoading: self.$viewModel.isLoading,
                            isCenteredOnUser: self.$viewModel.isCenteredOnUser,
                            loadRoadConditions: self.viewModel.loadRoadConditions)
-                .offset(x: (geometry.size.width / 2) - 40,
-                        y: -(geometry.size.height / 2) + 150)
+                    .offset(x: (geometry.size.width / 2) - 40,
+                            y: -(geometry.size.height / 2) + 150)
             }
+            .zIndex(1)
             
             if showLegend {
                 BottomCard {
                     VStack(alignment: .leading) {
-                        RoadConditions.clear.view
-                        RoadConditions.partlyCovered.view
-                        RoadConditions.covered.view
-                        RoadConditions.travelNotAdvised.view
-                        RoadConditions.impassable.view
+                        ForEach(RoadConditions.allCases, id: \.self) { roadConditions in
+                            roadConditions.view
+                        }
                         Spacer()
-                    }.padding()
+                    }
+                    .padding()
                 }
+                .zIndex(3)
             }
-        }
-        .edgesIgnoringSafeArea(.vertical)
+        }.edgesIgnoringSafeArea(.all)
     }
 }
 
