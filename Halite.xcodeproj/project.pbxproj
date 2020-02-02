@@ -12,6 +12,7 @@
 		7D427E0323E3AC44003AB3D2 /* IowaWinterRoadConditionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0223E3AC44003AB3D2 /* IowaWinterRoadConditionsResponse.swift */; };
 		7D427E0623E4F232003AB3D2 /* UserLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0523E4F232003AB3D2 /* UserLocationManager.swift */; };
 		7D427E0823E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0723E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift */; };
+		7D427E0A23E7505F003AB3D2 /* MKCoordinateRegionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0923E7505F003AB3D2 /* MKCoordinateRegionExtension.swift */; };
 		7D5C48CE23CFF52A00F271A5 /* EndpointRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48CD23CFF52A00F271A5 /* EndpointRouter.swift */; };
 		7D5C48D023CFF54D00F271A5 /* RequestComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48CF23CFF54D00F271A5 /* RequestComponents.swift */; };
 		7D5C48D323CFF64D00F271A5 /* ArcGISEndpointRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48D223CFF64D00F271A5 /* ArcGISEndpointRouter.swift */; };
@@ -95,6 +96,7 @@
 		7D427E0223E3AC44003AB3D2 /* IowaWinterRoadConditionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IowaWinterRoadConditionsResponse.swift; sourceTree = "<group>"; };
 		7D427E0523E4F232003AB3D2 /* UserLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationManager.swift; sourceTree = "<group>"; };
 		7D427E0723E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtension.swift; sourceTree = "<group>"; };
+		7D427E0923E7505F003AB3D2 /* MKCoordinateRegionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionExtension.swift; sourceTree = "<group>"; };
 		7D5C48CD23CFF52A00F271A5 /* EndpointRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointRouter.swift; sourceTree = "<group>"; };
 		7D5C48CF23CFF54D00F271A5 /* RequestComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestComponents.swift; sourceTree = "<group>"; };
 		7D5C48D223CFF64D00F271A5 /* ArcGISEndpointRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcGISEndpointRouter.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				7D5C48DB23CFF7D700F271A5 /* URLRequestExtension.swift */,
+				7D427E0923E7505F003AB3D2 /* MKCoordinateRegionExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				7D427E0323E3AC44003AB3D2 /* IowaWinterRoadConditionsResponse.swift in Sources */,
 				7DCCC32023CFF28800C32068 /* RoadConditions.swift in Sources */,
 				7D5C48CE23CFF52A00F271A5 /* EndpointRouter.swift in Sources */,
+				7D427E0A23E7505F003AB3D2 /* MKCoordinateRegionExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
