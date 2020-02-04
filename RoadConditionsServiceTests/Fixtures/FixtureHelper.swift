@@ -9,9 +9,10 @@ enum FixtureHelper {
             let geoJson = geoJsonData(for: filename),
             let roadConditions = try? geoJSONDecoder.decode(geoJson)
             else { return [] }
-        
-        return []
-//        return roadConditions.compactMap { $0 as? MKGeoJSONFeature }.compactMap { RoadConditionsMultiPolyline( }
+
+        return roadConditions
+            .compactMap { $0 as? MKGeoJSONFeature }
+            .compactMap { MidwestWinterRoadConditionsResponse.polyline(from: $0) ?? IowaWinterRoadConditionsResponse.polyline(from: $0) }
     }
     
     static private func geoJsonData(for localFileName: String) -> Data? {
