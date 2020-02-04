@@ -13,6 +13,10 @@
 		7D427E0623E4F232003AB3D2 /* UserLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0523E4F232003AB3D2 /* UserLocationManager.swift */; };
 		7D427E0823E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0723E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift */; };
 		7D427E0A23E7505F003AB3D2 /* MKCoordinateRegionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0923E7505F003AB3D2 /* MKCoordinateRegionExtension.swift */; };
+		7D427E0D23E77F20003AB3D2 /* Midwest_Winter_Road_Conditions.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7D427E0B23E77F20003AB3D2 /* Midwest_Winter_Road_Conditions.geojson */; };
+		7D427E0E23E77F20003AB3D2 /* Iowa_Winter_Road_Conditions.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7D427E0C23E77F20003AB3D2 /* Iowa_Winter_Road_Conditions.geojson */; };
+		7D427E1023E77F5A003AB3D2 /* MockRoadConditionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0F23E77F5A003AB3D2 /* MockRoadConditionsService.swift */; };
+		7D427E1223E77F9D003AB3D2 /* FixtureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1123E77F9D003AB3D2 /* FixtureHelper.swift */; };
 		7D5C48CE23CFF52A00F271A5 /* EndpointRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48CD23CFF52A00F271A5 /* EndpointRouter.swift */; };
 		7D5C48D023CFF54D00F271A5 /* RequestComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48CF23CFF54D00F271A5 /* RequestComponents.swift */; };
 		7D5C48D323CFF64D00F271A5 /* ArcGISEndpointRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48D223CFF64D00F271A5 /* ArcGISEndpointRouter.swift */; };
@@ -89,14 +93,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7D20A38723CF75C300503D60 /* Test_County_Conditions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Test_County_Conditions.geojson; path = "../../Road Conditions/Test_County_Conditions.geojson"; sourceTree = "<group>"; };
-		7D20A38823CF75C300503D60 /* Test_Road_Conditions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Test_Road_Conditions.geojson; path = "../../Road Conditions/Test_Road_Conditions.geojson"; sourceTree = "<group>"; };
 		7D3A758E23CFA3350008E73C /* MKMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 		7D427E0023E35CB5003AB3D2 /* MidwestWinterRoadConditionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidwestWinterRoadConditionsResponse.swift; sourceTree = "<group>"; };
 		7D427E0223E3AC44003AB3D2 /* IowaWinterRoadConditionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IowaWinterRoadConditionsResponse.swift; sourceTree = "<group>"; };
 		7D427E0523E4F232003AB3D2 /* UserLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationManager.swift; sourceTree = "<group>"; };
 		7D427E0723E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtension.swift; sourceTree = "<group>"; };
 		7D427E0923E7505F003AB3D2 /* MKCoordinateRegionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionExtension.swift; sourceTree = "<group>"; };
+		7D427E0B23E77F20003AB3D2 /* Midwest_Winter_Road_Conditions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Midwest_Winter_Road_Conditions.geojson; sourceTree = "<group>"; };
+		7D427E0C23E77F20003AB3D2 /* Iowa_Winter_Road_Conditions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Iowa_Winter_Road_Conditions.geojson; sourceTree = "<group>"; };
+		7D427E0F23E77F5A003AB3D2 /* MockRoadConditionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRoadConditionsService.swift; sourceTree = "<group>"; };
+		7D427E1123E77F9D003AB3D2 /* FixtureHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureHelper.swift; sourceTree = "<group>"; };
 		7D5C48CD23CFF52A00F271A5 /* EndpointRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointRouter.swift; sourceTree = "<group>"; };
 		7D5C48CF23CFF54D00F271A5 /* RequestComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestComponents.swift; sourceTree = "<group>"; };
 		7D5C48D223CFF64D00F271A5 /* ArcGISEndpointRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcGISEndpointRouter.swift; sourceTree = "<group>"; };
@@ -243,8 +249,9 @@
 		7D5C48DF23D000F400F271A5 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				7D20A38723CF75C300503D60 /* Test_County_Conditions.geojson */,
-				7D20A38823CF75C300503D60 /* Test_Road_Conditions.geojson */,
+				7D427E1123E77F9D003AB3D2 /* FixtureHelper.swift */,
+				7D427E0C23E77F20003AB3D2 /* Iowa_Winter_Road_Conditions.geojson */,
+				7D427E0B23E77F20003AB3D2 /* Midwest_Winter_Road_Conditions.geojson */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -266,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				7DCCC30A23CFF1D700C32068 /* RoadConditionsServiceTests.swift */,
+				7D427E0F23E77F5A003AB3D2 /* MockRoadConditionsService.swift */,
 				7D5C48DF23D000F400F271A5 /* Fixtures */,
 				7DCCC31A23CFF21700C32068 /* Supporting Files */,
 			);
@@ -527,6 +535,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D427E0E23E77F20003AB3D2 /* Iowa_Winter_Road_Conditions.geojson in Resources */,
+				7D427E0D23E77F20003AB3D2 /* Midwest_Winter_Road_Conditions.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +585,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DCCC30B23CFF1D700C32068 /* RoadConditionsServiceTests.swift in Sources */,
+				7D427E1023E77F5A003AB3D2 /* MockRoadConditionsService.swift in Sources */,
+				7D427E1223E77F9D003AB3D2 /* FixtureHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
