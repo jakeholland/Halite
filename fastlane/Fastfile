@@ -8,7 +8,7 @@ platform :ios do
   end
 
   desc "Push a new build to TestFlight"
-  lane :testFlight do
+  lane :beta do
     increment_build_number(build_number: number_of_commits)
     build_app(scheme: "Halite")
     upload_to_testflight(skip_waiting_for_build_processing: true)

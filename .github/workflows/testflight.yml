@@ -13,7 +13,7 @@ jobs:
       - name: Bundle Install
         run: bundle install
       - name: Release
-        run: bundle exec fastlane testflight
+        run: bundle exec fastlane beta
         env:
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
