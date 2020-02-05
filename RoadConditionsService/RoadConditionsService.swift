@@ -65,22 +65,3 @@ private extension RoadConditionsService {
         }
     }
 }
-
-// MARK: Mock Data
-
-//private extension RoadConditionsService {
-//    func loadMockRoadConditionsSegments() -> [RoadConditionsMultiPolyline] {
-//        let geoJSONDecoder = MKGeoJSONDecoder()
-//        guard
-//            let geoJson = geoJsonData(for: "Test_Road_Conditions"),
-//            let roadConditions = try? geoJSONDecoder.decode(geoJson)
-//            else { return [] }
-//
-//        return roadConditions.compactMap { $0 as? MKGeoJSONFeature }.compactMap { RoadConditionsMultiPolyline($0) }
-//    }
-//
-//    func geoJsonData(for localFileName: String) -> Data? {
-//        guard let path = Bundle.main.path(forResource: localFileName, ofType: "geojson") else { return nil }
-//        return try? Data(contentsOf: URL(fileURLWithPath: path))
-//    }
-//}

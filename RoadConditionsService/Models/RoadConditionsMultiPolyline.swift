@@ -1,6 +1,6 @@
 import MapKit
 
-public final class RoadConditionsMultiPolyline: MKMultiPolyline {
+public class RoadConditionsMultiPolyline: MKMultiPolyline {
     public let roadConditions: RoadConditions
     
     init(polylines: [MKPolyline], roadConditions: RoadConditions) {

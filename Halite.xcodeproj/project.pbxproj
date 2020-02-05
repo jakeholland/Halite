@@ -13,6 +13,15 @@
 		7D427E0623E4F232003AB3D2 /* UserLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0523E4F232003AB3D2 /* UserLocationManager.swift */; };
 		7D427E0823E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0723E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift */; };
 		7D427E0A23E7505F003AB3D2 /* MKCoordinateRegionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0923E7505F003AB3D2 /* MKCoordinateRegionExtension.swift */; };
+		7D427E0D23E77F20003AB3D2 /* Midwest_Winter_Road_Conditions.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7D427E0B23E77F20003AB3D2 /* Midwest_Winter_Road_Conditions.geojson */; };
+		7D427E0E23E77F20003AB3D2 /* Iowa_Winter_Road_Conditions.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7D427E0C23E77F20003AB3D2 /* Iowa_Winter_Road_Conditions.geojson */; };
+		7D427E1023E77F5A003AB3D2 /* MockRoadConditionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0F23E77F5A003AB3D2 /* MockRoadConditionsService.swift */; };
+		7D427E1223E77F9D003AB3D2 /* FixtureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1123E77F9D003AB3D2 /* FixtureHelper.swift */; };
+		7D427E1523E8FC27003AB3D2 /* MKCoordinateRegionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1423E8FC27003AB3D2 /* MKCoordinateRegionExtension.swift */; };
+		7D427E1723E8FC6B003AB3D2 /* CLLocationCoordinate2DExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1623E8FC6B003AB3D2 /* CLLocationCoordinate2DExtension.swift */; };
+		7D427E1923E8FCB6003AB3D2 /* MKCoordinateSpanExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1823E8FCB6003AB3D2 /* MKCoordinateSpanExtension.swift */; };
+		7D427E1B23E8FD5D003AB3D2 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1A23E8FD5D003AB3D2 /* MockError.swift */; };
+		7D427E1D23E8FF51003AB3D2 /* MockRoadConditionsMultiPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1C23E8FF51003AB3D2 /* MockRoadConditionsMultiPolyline.swift */; };
 		7D5C48CE23CFF52A00F271A5 /* EndpointRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48CD23CFF52A00F271A5 /* EndpointRouter.swift */; };
 		7D5C48D023CFF54D00F271A5 /* RequestComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48CF23CFF54D00F271A5 /* RequestComponents.swift */; };
 		7D5C48D323CFF64D00F271A5 /* ArcGISEndpointRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48D223CFF64D00F271A5 /* ArcGISEndpointRouter.swift */; };
@@ -89,14 +98,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7D20A38723CF75C300503D60 /* Test_County_Conditions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Test_County_Conditions.geojson; path = "../../Road Conditions/Test_County_Conditions.geojson"; sourceTree = "<group>"; };
-		7D20A38823CF75C300503D60 /* Test_Road_Conditions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Test_Road_Conditions.geojson; path = "../../Road Conditions/Test_Road_Conditions.geojson"; sourceTree = "<group>"; };
 		7D3A758E23CFA3350008E73C /* MKMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 		7D427E0023E35CB5003AB3D2 /* MidwestWinterRoadConditionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidwestWinterRoadConditionsResponse.swift; sourceTree = "<group>"; };
 		7D427E0223E3AC44003AB3D2 /* IowaWinterRoadConditionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IowaWinterRoadConditionsResponse.swift; sourceTree = "<group>"; };
 		7D427E0523E4F232003AB3D2 /* UserLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationManager.swift; sourceTree = "<group>"; };
 		7D427E0723E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtension.swift; sourceTree = "<group>"; };
 		7D427E0923E7505F003AB3D2 /* MKCoordinateRegionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionExtension.swift; sourceTree = "<group>"; };
+		7D427E0B23E77F20003AB3D2 /* Midwest_Winter_Road_Conditions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Midwest_Winter_Road_Conditions.geojson; sourceTree = "<group>"; };
+		7D427E0C23E77F20003AB3D2 /* Iowa_Winter_Road_Conditions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Iowa_Winter_Road_Conditions.geojson; sourceTree = "<group>"; };
+		7D427E0F23E77F5A003AB3D2 /* MockRoadConditionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRoadConditionsService.swift; sourceTree = "<group>"; };
+		7D427E1123E77F9D003AB3D2 /* FixtureHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureHelper.swift; sourceTree = "<group>"; };
+		7D427E1423E8FC27003AB3D2 /* MKCoordinateRegionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionExtension.swift; sourceTree = "<group>"; };
+		7D427E1623E8FC6B003AB3D2 /* CLLocationCoordinate2DExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtension.swift; sourceTree = "<group>"; };
+		7D427E1823E8FCB6003AB3D2 /* MKCoordinateSpanExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateSpanExtension.swift; sourceTree = "<group>"; };
+		7D427E1A23E8FD5D003AB3D2 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
+		7D427E1C23E8FF51003AB3D2 /* MockRoadConditionsMultiPolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRoadConditionsMultiPolyline.swift; sourceTree = "<group>"; };
 		7D5C48CD23CFF52A00F271A5 /* EndpointRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointRouter.swift; sourceTree = "<group>"; };
 		7D5C48CF23CFF54D00F271A5 /* RequestComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestComponents.swift; sourceTree = "<group>"; };
 		7D5C48D223CFF64D00F271A5 /* ArcGISEndpointRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcGISEndpointRouter.swift; sourceTree = "<group>"; };
@@ -184,6 +200,19 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		7D427E1323E8FC16003AB3D2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7D427E1623E8FC6B003AB3D2 /* CLLocationCoordinate2DExtension.swift */,
+				7D427E1423E8FC27003AB3D2 /* MKCoordinateRegionExtension.swift */,
+				7D427E1823E8FCB6003AB3D2 /* MKCoordinateSpanExtension.swift */,
+				7D427E1A23E8FD5D003AB3D2 /* MockError.swift */,
+				7D427E1C23E8FF51003AB3D2 /* MockRoadConditionsMultiPolyline.swift */,
+				7D427E0F23E77F5A003AB3D2 /* MockRoadConditionsService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		7D5C48D123CFF56D00F271A5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,8 +272,9 @@
 		7D5C48DF23D000F400F271A5 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				7D20A38723CF75C300503D60 /* Test_County_Conditions.geojson */,
-				7D20A38823CF75C300503D60 /* Test_Road_Conditions.geojson */,
+				7D427E1123E77F9D003AB3D2 /* FixtureHelper.swift */,
+				7D427E0C23E77F20003AB3D2 /* Iowa_Winter_Road_Conditions.geojson */,
+				7D427E0B23E77F20003AB3D2 /* Midwest_Winter_Road_Conditions.geojson */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -267,6 +297,7 @@
 			children = (
 				7DCCC30A23CFF1D700C32068 /* RoadConditionsServiceTests.swift */,
 				7D5C48DF23D000F400F271A5 /* Fixtures */,
+				7D427E1323E8FC16003AB3D2 /* Mocks */,
 				7DCCC31A23CFF21700C32068 /* Supporting Files */,
 			);
 			path = RoadConditionsServiceTests;
@@ -480,14 +511,12 @@
 					};
 					7DCCC30223CFF1D700C32068 = {
 						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 7DD14E3C23CEB9030084B52A;
 					};
 					7DD14E3C23CEB9030084B52A = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					7DD14E5223CEB9060084B52A = {
 						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 7DD14E3C23CEB9030084B52A;
 					};
 				};
 			};
@@ -527,6 +556,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D427E0E23E77F20003AB3D2 /* Iowa_Winter_Road_Conditions.geojson in Resources */,
+				7D427E0D23E77F20003AB3D2 /* Midwest_Winter_Road_Conditions.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,7 +605,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D427E1B23E8FD5D003AB3D2 /* MockError.swift in Sources */,
+				7D427E1D23E8FF51003AB3D2 /* MockRoadConditionsMultiPolyline.swift in Sources */,
 				7DCCC30B23CFF1D700C32068 /* RoadConditionsServiceTests.swift in Sources */,
+				7D427E1723E8FC6B003AB3D2 /* CLLocationCoordinate2DExtension.swift in Sources */,
+				7D427E1023E77F5A003AB3D2 /* MockRoadConditionsService.swift in Sources */,
+				7D427E1223E77F9D003AB3D2 /* FixtureHelper.swift in Sources */,
+				7D427E1523E8FC27003AB3D2 /* MKCoordinateRegionExtension.swift in Sources */,
+				7D427E1923E8FCB6003AB3D2 /* MKCoordinateSpanExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,7 +753,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Halite.app/Halite";
 			};
 			name = Debug;
 		};
@@ -735,7 +772,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Halite.app/Halite";
 			};
 			name = Release;
 		};
@@ -860,7 +896,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Halite/Supporting Files/Halite.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Halite/Preview Content\"";
 				DEVELOPMENT_TEAM = SU4T96VBX6;
@@ -870,7 +906,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakeholland.halite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -886,7 +922,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Halite/Supporting Files/Halite.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Halite/Preview Content\"";
 				DEVELOPMENT_TEAM = SU4T96VBX6;
@@ -896,7 +932,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakeholland.halite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -909,7 +945,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SU4T96VBX6;
 				INFOPLIST_FILE = "Halite Tests/Info.plist";
@@ -923,7 +958,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Halite.app/Halite";
 			};
 			name = Debug;
 		};
@@ -931,7 +965,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SU4T96VBX6;
 				INFOPLIST_FILE = "Halite Tests/Info.plist";
@@ -945,7 +978,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Halite.app/Halite";
 			};
 			name = Release;
 		};
