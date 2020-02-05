@@ -1,0 +1,12 @@
+on: pull_request
+name: Build, Test
+jobs:
+  test:
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Bundle Install
+        run: bundle install
+      - name: Test
+        run: bundle exec fastlane test
