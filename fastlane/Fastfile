@@ -7,14 +7,27 @@ platform :ios do
     run_tests(scheme: "Halite")
   end
 
+  desc "Push a new build to TestFlight"
+  lane :testFlight do
+    increment_build_number(build_number: number_of_commits)
+    build_app(scheme: "Halite")
+    upload_to_testflight(skip_waiting_for_build_processing: true)
+  end
+
+
   desc "Push a new release build to the App Store"
   lane :release do
-    increment_build_number(
-      app_store_build_number + 1,
-      xcodeproj: "Halite.xcodeproj"
+    increment_build_number(build_number: number_of_commits)
+    build_app(
+      scheme: "Halite",
+      export_method: "app-store",
+      configuration: "Release",
+      include_bitcode: true
     )
-    build_app(scheme: "Halite")
-    upload_to_app_store(skip_metadata: true, skip_screenshots: true)
+    upload_to_app_store(
+      skip_metadata: true,
+      skip_screenshots: true
+    )
   end
 
 end
