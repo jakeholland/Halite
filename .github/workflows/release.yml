@@ -1,7 +1,8 @@
 on:
   push:
     branches:
-      - master
+      - release
+      - Indiana-Data
 name: Release To App Store
 jobs:
   test:
@@ -15,4 +16,5 @@ jobs:
         run: bundle exec fastlane release
         env:
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+          FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
           FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
