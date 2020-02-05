@@ -12,7 +12,7 @@ enum INDOTRouter: INDOTEndpointRouter {
                 "maxBeginDateOffset": 604800000,
                 "minEndDateOffset": 0,
                 "eventClassifications": ["winterDriving"],
-                "zoom": 7,
+//                "zoom": 7,
                 "bounds": [
                     "minLat": rect.minX,
                     "minLon": rect.minY,
