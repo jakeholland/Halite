@@ -17,7 +17,8 @@ platform :ios do
     )
     build_app(
       scheme: "Halite",
-      export_method: "app-store"
+      export_method: "app-store",
+      configuration: "Release"
     )
     upload_to_testflight(
       distribute_external: false,
@@ -37,6 +38,7 @@ platform :ios do
     build_app(
       scheme: "Halite",
       export_method: "app-store",
+      configuration: "Release",
       include_bitcode: true
     )
     upload_to_app_store(
