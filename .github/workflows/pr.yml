@@ -3,6 +3,12 @@ name: Build, Test
 jobs:
   test:
     runs-on: macOS-latest
+    env:
+      FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+      FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
+      FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}
+      MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+      MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
     steps:
       - name: Checkout
         uses: actions/checkout@master

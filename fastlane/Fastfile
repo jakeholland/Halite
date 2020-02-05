@@ -4,6 +4,7 @@ platform :ios do
 
   desc "Build and test application"
   lane :test do
+    sync_code_signing(type: "development", readonly: is_ci)
     run_tests(scheme: "Halite")
   end
 
@@ -13,8 +14,7 @@ platform :ios do
     sync_code_signing(type: "appstore", readonly: is_ci)
     build_app(
       scheme: "Halite",
-      export_method: "app-store",
-
+      export_method: "app-store"
     )
     upload_to_testflight(
       distribute_external: true,
