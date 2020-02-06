@@ -23,8 +23,8 @@ platform :ios do
       configuration: "Release"
     )
     upload_to_testflight(
-      skip_waiting_for_build_processing: true,
-      changelog: changelog_from_git_commits
+      skip_submission: true,
+      skip_waiting_for_build_processing: true
     )
   end
 
