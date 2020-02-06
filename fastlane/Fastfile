@@ -8,7 +8,10 @@ platform :ios do
 
   desc "Build and test application"
   lane :test do
-    sync_code_signing(type: "development", readonly: is_ci)
+    sync_code_signing(
+      type: "development",
+      readonly: is_ci
+    )
     run_tests(scheme: "Halite")
   end
 
