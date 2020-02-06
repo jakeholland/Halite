@@ -2,6 +2,10 @@ default_platform(:ios)
 
 platform :ios do
 
+  before_all do
+    xcversion(version: "~> 11.3")
+  end
+
   desc "Build and test application"
   lane :test do
     sync_code_signing(type: "development", readonly: is_ci)
