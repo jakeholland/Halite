@@ -2,7 +2,6 @@ on:
   push:
     branches:
       - master
-      - Indiana-Data
 name: Upload To TestFlight
 jobs:
   test:

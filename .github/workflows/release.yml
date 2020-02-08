@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - release
+      - Indiana-Data
 name: Release To App Store
 jobs:
   test:
