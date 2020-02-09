@@ -8,7 +8,8 @@ public struct RoadConditionsService: RoadConditionsServiceProtocol {
     public func getRoadConditions(in region: MKCoordinateRegion, completion: @escaping (Swift.Result<([RoadConditionsMultiPolyline]), Error>) -> Void) {
         let roadConditionsPromises: [Promise<[RoadConditionsMultiPolyline]>] = [
             getMidwestRoadConditions(in: region),
-            getIowaRoadConditions(in: region)
+            getIowaRoadConditions(in: region),
+            getIndianaRoadConditions(in: region)
         ]
         
         when(fulfilled: roadConditionsPromises).done { roadConditionsSegmentArray in
@@ -23,6 +24,24 @@ public struct RoadConditionsService: RoadConditionsServiceProtocol {
 // MARK: Private
 
 private extension RoadConditionsService {
+    func getIndianaRoadConditions(in region: MKCoordinateRegion) -> Promise<[RoadConditionsMultiPolyline]> {
+        Promise { seal in
+            let components: INDOTRouter = .getIndianaRoadConditions(in: region)
+            guard let request = components.urlRequest else {
+                seal.reject(RoadConditionsError.unknown)
+                return
+            }
+             
+            firstly {
+                request.responseDecodable(IndianaWinterRoadConditions.self)
+            }.done { indianaRoadConditions in
+                seal.fulfill(indianaRoadConditions.roadConditionsSegments)
+            }.catch { error in
+                seal.reject(error)
+            }
+        }
+    }
+    
     func getIowaRoadConditions(in region: MKCoordinateRegion) -> Promise<[RoadConditionsMultiPolyline]> {
         Promise { seal in
             let components: ArcGISRouter = .getIowaRoadConditions(in: region)
