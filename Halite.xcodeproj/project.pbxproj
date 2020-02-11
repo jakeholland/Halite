@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D2FC94A23F22E58001AA49E /* HttpMockingTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2FC94823F22E42001AA49E /* HttpMockingTestCase.swift */; };
+		7D2FC94C23F22E9E001AA49E /* MockSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2FC94B23F22E9E001AA49E /* MockSessionManager.swift */; };
+		7D2FC95023F23044001AA49E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2FC94F23F23044001AA49E /* Request.swift */; };
+		7D2FC95223F24344001AA49E /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2FC95123F24344001AA49E /* SessionManager.swift */; };
+		7D2FC95423F24364001AA49E /* URLSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2FC95323F24364001AA49E /* URLSessionManager.swift */; };
+		7D2FC95623F24621001AA49E /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2FC95523F24621001AA49E /* Stub.swift */; };
+		7D2FC95A23F247CE001AA49E /* MockRoadConditionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2FC95923F247CE001AA49E /* MockRoadConditionsService.swift */; };
+		7D2FC95C23F247EC001AA49E /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2FC95B23F247EC001AA49E /* MockError.swift */; };
+		7D2FC95D23F248EA001AA49E /* MockRoadConditionsMultiPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1C23E8FF51003AB3D2 /* MockRoadConditionsMultiPolyline.swift */; };
+		7D2FC95E23F24909001AA49E /* MKCoordinateRegionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1423E8FC27003AB3D2 /* MKCoordinateRegionExtension.swift */; };
+		7D2FC95F23F2490E001AA49E /* CLLocationCoordinate2DExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1623E8FC6B003AB3D2 /* CLLocationCoordinate2DExtension.swift */; };
+		7D2FC96023F2493D001AA49E /* RoadConditionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCC30A23CFF1D700C32068 /* RoadConditionsServiceTests.swift */; };
+		7D2FC96123F24AC1001AA49E /* MKCoordinateSpanExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1823E8FCB6003AB3D2 /* MKCoordinateSpanExtension.swift */; };
 		7D3A758F23CFA3350008E73C /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3A758E23CFA3350008E73C /* MKMapViewExtension.swift */; };
 		7D427DFB23DFDD1F003AB3D2 /* INDOTEndpointRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427DFA23DFDD1F003AB3D2 /* INDOTEndpointRouter.swift */; };
 		7D427DFD23DFDD78003AB3D2 /* INDOTRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427DFC23DFDD78003AB3D2 /* INDOTRouter.swift */; };
@@ -16,24 +29,16 @@
 		7D427E0623E4F232003AB3D2 /* UserLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0523E4F232003AB3D2 /* UserLocationManager.swift */; };
 		7D427E0823E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0723E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift */; };
 		7D427E0A23E7505F003AB3D2 /* MKCoordinateRegionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0923E7505F003AB3D2 /* MKCoordinateRegionExtension.swift */; };
-		7D427E0D23E77F20003AB3D2 /* Midwest_Winter_Road_Conditions.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7D427E0B23E77F20003AB3D2 /* Midwest_Winter_Road_Conditions.geojson */; };
-		7D427E0E23E77F20003AB3D2 /* Iowa_Winter_Road_Conditions.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 7D427E0C23E77F20003AB3D2 /* Iowa_Winter_Road_Conditions.geojson */; };
-		7D427E1023E77F5A003AB3D2 /* MockRoadConditionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E0F23E77F5A003AB3D2 /* MockRoadConditionsService.swift */; };
 		7D427E1223E77F9D003AB3D2 /* FixtureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1123E77F9D003AB3D2 /* FixtureHelper.swift */; };
-		7D427E1523E8FC27003AB3D2 /* MKCoordinateRegionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1423E8FC27003AB3D2 /* MKCoordinateRegionExtension.swift */; };
-		7D427E1723E8FC6B003AB3D2 /* CLLocationCoordinate2DExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1623E8FC6B003AB3D2 /* CLLocationCoordinate2DExtension.swift */; };
-		7D427E1923E8FCB6003AB3D2 /* MKCoordinateSpanExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1823E8FCB6003AB3D2 /* MKCoordinateSpanExtension.swift */; };
 		7D427E1B23E8FD5D003AB3D2 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1A23E8FD5D003AB3D2 /* MockError.swift */; };
-		7D427E1D23E8FF51003AB3D2 /* MockRoadConditionsMultiPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D427E1C23E8FF51003AB3D2 /* MockRoadConditionsMultiPolyline.swift */; };
 		7D5C48CE23CFF52A00F271A5 /* EndpointRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48CD23CFF52A00F271A5 /* EndpointRouter.swift */; };
 		7D5C48D023CFF54D00F271A5 /* RequestComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48CF23CFF54D00F271A5 /* RequestComponents.swift */; };
 		7D5C48D323CFF64D00F271A5 /* ArcGISEndpointRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48D223CFF64D00F271A5 /* ArcGISEndpointRouter.swift */; };
 		7D5C48D523CFF68000F271A5 /* ArcGISRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48D423CFF68000F271A5 /* ArcGISRouter.swift */; };
-		7D5C48DC23CFF7D700F271A5 /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48DB23CFF7D700F271A5 /* URLRequestExtension.swift */; };
+		7D5C48DC23CFF7D700F271A5 /* RequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48DB23CFF7D700F271A5 /* RequestExtension.swift */; };
 		7D5C48DE23CFF7F400F271A5 /* RoadConditionsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48DD23CFF7F400F271A5 /* RoadConditionsError.swift */; };
 		7D5C48E123D02BB400F271A5 /* RoadConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C48E023D02BB400F271A5 /* RoadConditionsView.swift */; };
 		7DCCC30423CFF1D700C32068 /* RoadConditionsService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCCC2FB23CFF1D600C32068 /* RoadConditionsService.framework */; };
-		7DCCC30B23CFF1D700C32068 /* RoadConditionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCC30A23CFF1D700C32068 /* RoadConditionsServiceTests.swift */; };
 		7DCCC31023CFF1D700C32068 /* RoadConditionsService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCCC2FB23CFF1D600C32068 /* RoadConditionsService.framework */; };
 		7DCCC31123CFF1D700C32068 /* RoadConditionsService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCCC2FB23CFF1D600C32068 /* RoadConditionsService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DCCC31C23CFF23F00C32068 /* RoadConditionsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCC31B23CFF23F00C32068 /* RoadConditionsServiceProtocol.swift */; };
@@ -48,6 +53,9 @@
 		7DD14E4D23CEB9060084B52A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD14E4B23CEB9060084B52A /* LaunchScreen.storyboard */; };
 		7DD14E5823CEB9060084B52A /* RoadConditionsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD14E5723CEB9060084B52A /* RoadConditionsViewModelTests.swift */; };
 		7DD14E6323CEB9D20084B52A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD14E6223CEB9D20084B52A /* MapView.swift */; };
+		7DE6FCA523F22B5200905145 /* Iowa_Winter_Road_Conditions.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DE6FCA223F22B5100905145 /* Iowa_Winter_Road_Conditions.json */; };
+		7DE6FCA623F22B5200905145 /* Midwest_Winter_Road_Conditions.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DE6FCA323F22B5200905145 /* Midwest_Winter_Road_Conditions.json */; };
+		7DE6FCA723F22B5200905145 /* Indiana_Winter_Road_Conditions.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DE6FCA423F22B5200905145 /* Indiana_Winter_Road_Conditions.json */; };
 		7DEA508E23CFA82100C98255 /* RoadConditionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA508D23CFA82100C98255 /* RoadConditionsViewModel.swift */; };
 		7DF8F2F423D371BD008A8390 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF8F2F323D371BD008A8390 /* ActivityIndicator.swift */; };
 		7DF8F2F723D4C800008A8390 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7DF8F2F623D4C800008A8390 /* PromiseKit */; };
@@ -101,6 +109,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7D2FC94823F22E42001AA49E /* HttpMockingTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMockingTestCase.swift; sourceTree = "<group>"; };
+		7D2FC94B23F22E9E001AA49E /* MockSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSessionManager.swift; sourceTree = "<group>"; };
+		7D2FC94F23F23044001AA49E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		7D2FC95123F24344001AA49E /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		7D2FC95323F24364001AA49E /* URLSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionManager.swift; sourceTree = "<group>"; };
+		7D2FC95523F24621001AA49E /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
+		7D2FC95923F247CE001AA49E /* MockRoadConditionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRoadConditionsService.swift; sourceTree = "<group>"; };
+		7D2FC95B23F247EC001AA49E /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
 		7D3A758E23CFA3350008E73C /* MKMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 		7D427DFA23DFDD1F003AB3D2 /* INDOTEndpointRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INDOTEndpointRouter.swift; sourceTree = "<group>"; };
 		7D427DFC23DFDD78003AB3D2 /* INDOTRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INDOTRouter.swift; sourceTree = "<group>"; };
@@ -110,9 +126,6 @@
 		7D427E0523E4F232003AB3D2 /* UserLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationManager.swift; sourceTree = "<group>"; };
 		7D427E0723E4FAA9003AB3D2 /* CLLocationCoordinate2DExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtension.swift; sourceTree = "<group>"; };
 		7D427E0923E7505F003AB3D2 /* MKCoordinateRegionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionExtension.swift; sourceTree = "<group>"; };
-		7D427E0B23E77F20003AB3D2 /* Midwest_Winter_Road_Conditions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Midwest_Winter_Road_Conditions.geojson; sourceTree = "<group>"; };
-		7D427E0C23E77F20003AB3D2 /* Iowa_Winter_Road_Conditions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Iowa_Winter_Road_Conditions.geojson; sourceTree = "<group>"; };
-		7D427E0F23E77F5A003AB3D2 /* MockRoadConditionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRoadConditionsService.swift; sourceTree = "<group>"; };
 		7D427E1123E77F9D003AB3D2 /* FixtureHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureHelper.swift; sourceTree = "<group>"; };
 		7D427E1423E8FC27003AB3D2 /* MKCoordinateRegionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionExtension.swift; sourceTree = "<group>"; };
 		7D427E1623E8FC6B003AB3D2 /* CLLocationCoordinate2DExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtension.swift; sourceTree = "<group>"; };
@@ -123,7 +136,7 @@
 		7D5C48CF23CFF54D00F271A5 /* RequestComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestComponents.swift; sourceTree = "<group>"; };
 		7D5C48D223CFF64D00F271A5 /* ArcGISEndpointRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcGISEndpointRouter.swift; sourceTree = "<group>"; };
 		7D5C48D423CFF68000F271A5 /* ArcGISRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcGISRouter.swift; sourceTree = "<group>"; };
-		7D5C48DB23CFF7D700F271A5 /* URLRequestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
+		7D5C48DB23CFF7D700F271A5 /* RequestExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExtension.swift; sourceTree = "<group>"; };
 		7D5C48DD23CFF7F400F271A5 /* RoadConditionsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsError.swift; sourceTree = "<group>"; };
 		7D5C48E023D02BB400F271A5 /* RoadConditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsView.swift; sourceTree = "<group>"; };
 		7DA7FBC423CF91AB002D443B /* RoadConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoadConditions.swift; path = ../Routers/RoadConditions.swift; sourceTree = "<group>"; };
@@ -148,6 +161,9 @@
 		7DD14E5923CEB9060084B52A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DD14E6223CEB9D20084B52A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		7DD14E6623CEBB440084B52A /* Halite.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Halite.entitlements; sourceTree = "<group>"; };
+		7DE6FCA223F22B5100905145 /* Iowa_Winter_Road_Conditions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Iowa_Winter_Road_Conditions.json; sourceTree = "<group>"; };
+		7DE6FCA323F22B5200905145 /* Midwest_Winter_Road_Conditions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Midwest_Winter_Road_Conditions.json; sourceTree = "<group>"; };
+		7DE6FCA423F22B5200905145 /* Indiana_Winter_Road_Conditions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Indiana_Winter_Road_Conditions.json; sourceTree = "<group>"; };
 		7DEA508D23CFA82100C98255 /* RoadConditionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadConditionsViewModel.swift; sourceTree = "<group>"; };
 		7DF8F2F323D371BD008A8390 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		7DF8F2F823D4DAF9008A8390 /* BottomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCard.swift; sourceTree = "<group>"; };
@@ -189,6 +205,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D2FC95723F24780001AA49E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7D427E1623E8FC6B003AB3D2 /* CLLocationCoordinate2DExtension.swift */,
+				7D427E1423E8FC27003AB3D2 /* MKCoordinateRegionExtension.swift */,
+				7D427E1823E8FCB6003AB3D2 /* MKCoordinateSpanExtension.swift */,
+				7D2FC95B23F247EC001AA49E /* MockError.swift */,
+				7D427E1C23E8FF51003AB3D2 /* MockRoadConditionsMultiPolyline.swift */,
+				7D2FC95923F247CE001AA49E /* MockRoadConditionsService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7D2FC96223F24C8A001AA49E /* Supporting FIles */ = {
+			isa = PBXGroup;
+			children = (
+				7DD14E5923CEB9060084B52A /* Info.plist */,
+			);
+			path = "Supporting FIles";
+			sourceTree = "<group>";
+		};
 		7D3A759023CFA3380008E73C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,12 +246,10 @@
 		7D427E1323E8FC16003AB3D2 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				7D427E1623E8FC6B003AB3D2 /* CLLocationCoordinate2DExtension.swift */,
-				7D427E1423E8FC27003AB3D2 /* MKCoordinateRegionExtension.swift */,
-				7D427E1823E8FCB6003AB3D2 /* MKCoordinateSpanExtension.swift */,
+				7D2FC94823F22E42001AA49E /* HttpMockingTestCase.swift */,
 				7D427E1A23E8FD5D003AB3D2 /* MockError.swift */,
-				7D427E1C23E8FF51003AB3D2 /* MockRoadConditionsMultiPolyline.swift */,
-				7D427E0F23E77F5A003AB3D2 /* MockRoadConditionsService.swift */,
+				7D2FC94B23F22E9E001AA49E /* MockSessionManager.swift */,
+				7D2FC95523F24621001AA49E /* Stub.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -257,6 +292,7 @@
 				7DA7FBC423CF91AB002D443B /* RoadConditions.swift */,
 				7D5C48DD23CFF7F400F271A5 /* RoadConditionsError.swift */,
 				7DA7FBC623CF91E4002D443B /* RoadConditionsMultiPolyline.swift */,
+				7D2FC95323F24364001AA49E /* URLSessionManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				7DCCC31B23CFF23F00C32068 /* RoadConditionsServiceProtocol.swift */,
+				7D2FC95123F24344001AA49E /* SessionManager.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -272,8 +309,9 @@
 		7D5C48DA23CFF7CA00F271A5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7D5C48DB23CFF7D700F271A5 /* URLRequestExtension.swift */,
 				7D427E0923E7505F003AB3D2 /* MKCoordinateRegionExtension.swift */,
+				7D2FC94F23F23044001AA49E /* Request.swift */,
+				7D5C48DB23CFF7D700F271A5 /* RequestExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -281,9 +319,10 @@
 		7D5C48DF23D000F400F271A5 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				7DE6FCA423F22B5200905145 /* Indiana_Winter_Road_Conditions.json */,
+				7DE6FCA223F22B5100905145 /* Iowa_Winter_Road_Conditions.json */,
+				7DE6FCA323F22B5200905145 /* Midwest_Winter_Road_Conditions.json */,
 				7D427E1123E77F9D003AB3D2 /* FixtureHelper.swift */,
-				7D427E0C23E77F20003AB3D2 /* Iowa_Winter_Road_Conditions.geojson */,
-				7D427E0B23E77F20003AB3D2 /* Midwest_Winter_Road_Conditions.geojson */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -378,7 +417,8 @@
 			isa = PBXGroup;
 			children = (
 				7DD14E5723CEB9060084B52A /* RoadConditionsViewModelTests.swift */,
-				7DD14E5923CEB9060084B52A /* Info.plist */,
+				7D2FC95723F24780001AA49E /* Mocks */,
+				7D2FC96223F24C8A001AA49E /* Supporting FIles */,
 			);
 			path = "Halite Tests";
 			sourceTree = "<group>";
@@ -565,8 +605,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D427E0E23E77F20003AB3D2 /* Iowa_Winter_Road_Conditions.geojson in Resources */,
-				7D427E0D23E77F20003AB3D2 /* Midwest_Winter_Road_Conditions.geojson in Resources */,
+				7DE6FCA723F22B5200905145 /* Indiana_Winter_Road_Conditions.json in Resources */,
+				7DE6FCA623F22B5200905145 /* Midwest_Winter_Road_Conditions.json in Resources */,
+				7DE6FCA523F22B5200905145 /* Iowa_Winter_Road_Conditions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,18 +636,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D5C48D523CFF68000F271A5 /* ArcGISRouter.swift in Sources */,
-				7D5C48DC23CFF7D700F271A5 /* URLRequestExtension.swift in Sources */,
+				7D5C48DC23CFF7D700F271A5 /* RequestExtension.swift in Sources */,
+				7D2FC95223F24344001AA49E /* SessionManager.swift in Sources */,
 				7D5C48D323CFF64D00F271A5 /* ArcGISEndpointRouter.swift in Sources */,
 				7D427DFB23DFDD1F003AB3D2 /* INDOTEndpointRouter.swift in Sources */,
 				7D5C48DE23CFF7F400F271A5 /* RoadConditionsError.swift in Sources */,
 				7DCCC31C23CFF23F00C32068 /* RoadConditionsServiceProtocol.swift in Sources */,
 				7DCCC32123CFF28800C32068 /* RoadConditionsMultiPolyline.swift in Sources */,
+				7D2FC95023F23044001AA49E /* Request.swift in Sources */,
 				7D427DFD23DFDD78003AB3D2 /* INDOTRouter.swift in Sources */,
 				7D5C48D023CFF54D00F271A5 /* RequestComponents.swift in Sources */,
 				7D427E0123E35CB5003AB3D2 /* MidwestWinterRoadConditionsResponse.swift in Sources */,
 				7DCCC31E23CFF25D00C32068 /* RoadConditionsService.swift in Sources */,
 				7D427DFF23DFDDEA003AB3D2 /* IndianaWinterRoadConditions.swift in Sources */,
 				7D427E0323E3AC44003AB3D2 /* IowaWinterRoadConditionsResponse.swift in Sources */,
+				7D2FC95423F24364001AA49E /* URLSessionManager.swift in Sources */,
 				7DCCC32023CFF28800C32068 /* RoadConditions.swift in Sources */,
 				7D5C48CE23CFF52A00F271A5 /* EndpointRouter.swift in Sources */,
 				7D427E0A23E7505F003AB3D2 /* MKCoordinateRegionExtension.swift in Sources */,
@@ -618,13 +662,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D427E1B23E8FD5D003AB3D2 /* MockError.swift in Sources */,
-				7D427E1D23E8FF51003AB3D2 /* MockRoadConditionsMultiPolyline.swift in Sources */,
-				7DCCC30B23CFF1D700C32068 /* RoadConditionsServiceTests.swift in Sources */,
-				7D427E1723E8FC6B003AB3D2 /* CLLocationCoordinate2DExtension.swift in Sources */,
-				7D427E1023E77F5A003AB3D2 /* MockRoadConditionsService.swift in Sources */,
+				7D2FC95623F24621001AA49E /* Stub.swift in Sources */,
 				7D427E1223E77F9D003AB3D2 /* FixtureHelper.swift in Sources */,
-				7D427E1523E8FC27003AB3D2 /* MKCoordinateRegionExtension.swift in Sources */,
-				7D427E1923E8FCB6003AB3D2 /* MKCoordinateSpanExtension.swift in Sources */,
+				7D2FC94A23F22E58001AA49E /* HttpMockingTestCase.swift in Sources */,
+				7D2FC96023F2493D001AA49E /* RoadConditionsServiceTests.swift in Sources */,
+				7D2FC94C23F22E9E001AA49E /* MockSessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,7 +693,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D2FC95E23F24909001AA49E /* MKCoordinateRegionExtension.swift in Sources */,
+				7D2FC95F23F2490E001AA49E /* CLLocationCoordinate2DExtension.swift in Sources */,
+				7D2FC96123F24AC1001AA49E /* MKCoordinateSpanExtension.swift in Sources */,
 				7DD14E5823CEB9060084B52A /* RoadConditionsViewModelTests.swift in Sources */,
+				7D2FC95D23F248EA001AA49E /* MockRoadConditionsMultiPolyline.swift in Sources */,
+				7D2FC95C23F247EC001AA49E /* MockError.swift in Sources */,
+				7D2FC95A23F247CE001AA49E /* MockRoadConditionsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -971,7 +1019,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Halite Tests/Info.plist";
+				INFOPLIST_FILE = "Halite Tests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -993,7 +1041,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Halite Tests/Info.plist";
+				INFOPLIST_FILE = "Halite Tests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -2,7 +2,7 @@ import Foundation
 
 protocol EndpointRouter {
     var components: RequestComponents { get }
-    var urlRequest: URLRequest? { get }
+    var urlRequest: URLRequest { get }
 }
 
 extension Parameters {

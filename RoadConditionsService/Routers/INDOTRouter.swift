@@ -3,22 +3,21 @@ import MapKit
 
 enum INDOTRouter: INDOTEndpointRouter {
 
-    case getIndianaRoadConditions(in: MKCoordinateRegion)
+    case getIndianaRoadConditions
 
     var components: RequestComponents {
         switch self {
-        case .getIndianaRoadConditions(let region):
-            let rect = region.mapRect
+        case .getIndianaRoadConditions:
             let params: Parameters = [
                 "maxBeginDateOffset": 604800000,
                 "minEndDateOffset": 0,
                 "eventClassifications": ["winterDriving"],
                 "zoom": 7,
                 "bounds": [
-                    "minLat": 37.43899672738482,
-                    "minLon": -112.33520515625003,
-                    "maxLat": 42.13217881151657,
-                    "maxLon": -60.26000984375003
+                    "minLat": 37.7718,
+                    "minLon": -88.098,
+                    "maxLat": 41.7611,
+                    "maxLon": -84.809
                 ],
                 "knownKeys": []
             ]

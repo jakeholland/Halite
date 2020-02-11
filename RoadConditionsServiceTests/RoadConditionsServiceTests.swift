@@ -1,33 +1,27 @@
 @testable import RoadConditionsService
 import XCTest
 
-final class RoadConditionsServiceTests: XCTestCase {
+final class RoadConditionsServiceTests: HttpMockingTestCase {
     
-    private let mockRoadConditionsService = MockRoadConditionsService()
+    private lazy var roadConditionsService = RoadConditionsService(sessionManager: mockSessionManager)
 
-    func testWhenGetRoadConditionsThenErrorIsReturned() {
-        let mockError = MockError()
-        mockRoadConditionsService.errorToReturn = mockError
-        mockRoadConditionsService.getRoadConditions(in: .mock) { result in
-            guard case let .failure(error) = result else {
-                XCTFail("Unexpected Success")
-                return
-            }
-            
-            XCTAssertEqual(error as? MockError, mockError)
-        }
-    }
-    
-    func testWhenGetRoadConditionsThenConditionsAreReturned() {
-        let mockRoadConditions: [MockRoadConditionsMultiPolyline] = .mock
-        mockRoadConditionsService.conditionsToReturn = mockRoadConditions
-        mockRoadConditionsService.getRoadConditions(in: .mock) { result in
-            guard case let .success(roadConditions) = result else {
+    func testWhenGetRoadConditionsThenAllSegmentsAreReturned() {
+        let expectation = XCTestExpectation(description: "Get Road Conditions")
+        stub(.get, "30453f682b104d33980397c86ef56126_0.geojson", fixture: "Midwest_Winter_Road_Conditions")
+        stub(.get, "181770a5c1bf498797245c13afffa155_0.geojson", fixture: "Iowa_Winter_Road_Conditions")
+        stub(.post, "eventMapFeatures/updateMap", fixture: "Indiana_Winter_Road_Conditions")
+        
+        roadConditionsService.getRoadConditions { result in
+            defer { expectation.fulfill() }
+            guard case let .success(roadConditionSegments) = result else {
                 XCTFail("Unexpected Failure")
                 return
             }
             
-            XCTAssertEqual(roadConditions, mockRoadConditions)
+            XCTAssertEqual(roadConditionSegments.count, 2)
         }
+        
+        wait(for: [expectation], timeout: 5)
     }
+    
 }

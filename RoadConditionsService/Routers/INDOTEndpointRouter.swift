@@ -3,16 +3,16 @@ import Foundation
 protocol INDOTEndpointRouter: EndpointRouter { }
 
 extension INDOTEndpointRouter {
-    var urlRequest: URLRequest? {
+    var urlRequest: URLRequest {
         let baseUrlString = "https://indot.carsprogram.org/tgevents/api"
 
-        guard let baseUrl = URL(string: baseUrlString) else { return nil }
+        guard let baseUrl = URL(string: baseUrlString) else { fatalError("Invalid URL") }
         let url = baseUrl.appendingPathComponent(components.path)
         
         guard
             let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true),
             let urlWithComponents = urlComponents.url
-            else { return nil }
+            else { fatalError("Invalid URL") }
 
         var urlRequest = URLRequest(url: urlWithComponents)
         urlRequest.httpMethod = components.method.rawValue
