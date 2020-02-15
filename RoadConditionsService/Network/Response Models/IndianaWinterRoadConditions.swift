@@ -54,11 +54,11 @@ struct IndianaWinterRepresentation: Decodable {
             return .clear
         case "/tg_in_fair_driving.gif":
             return .partlyCovered
-        case "/tg_in_hazardous_driving.gif":
+        case "/tg_in_difficult_hazardous_driving.gif":
             return .covered
-        case "/tg_in_closed_driving.gif":
+        case "/closure_legend.gif":
             return .impassable
-        default:
+        default:x
             return nil
         }
     }
