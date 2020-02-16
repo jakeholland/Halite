@@ -58,7 +58,7 @@ struct IndianaWinterRepresentation: Decodable {
             return .covered
         case "/closure_legend.gif":
             return .impassable
-        default:x
+        default:
             return nil
         }
     }
