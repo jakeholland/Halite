@@ -4,7 +4,7 @@ platform :ios do
 
   before_all do
     setup_ci
-    xcversion(version: "~> 11.3")
+    xcversion(version: "11.3.1")
   end
 
   desc "Build and test application"
