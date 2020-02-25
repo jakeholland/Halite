@@ -1,4 +1,5 @@
 @testable import RoadConditionsService
+import CoreLocation
 import XCTest
 
 final class RoadConditionsServiceTests: HttpMockingTestCase {
@@ -19,6 +20,18 @@ final class RoadConditionsServiceTests: HttpMockingTestCase {
             }
             
             XCTAssertEqual(roadConditionSegments.count, 2)
+            
+            XCTAssertEqual(roadConditionSegments[0].roadConditions, RoadConditions.clear)
+            XCTAssertEqual(roadConditionSegments[0].polylines.count, 7332)
+            let firstClearPolylineCoordinate = roadConditionSegments[0].polylines[0].coordinate
+            XCTAssertEqual(firstClearPolylineCoordinate.latitude, 37.592, accuracy: 0.001)
+            XCTAssertEqual(firstClearPolylineCoordinate.longitude, -92.137, accuracy: 0.001)
+            
+            XCTAssertEqual(roadConditionSegments[1].roadConditions, RoadConditions.partlyCovered)
+            XCTAssertEqual(roadConditionSegments[1].polylines.count, 38)
+            let firstPartlyCoveredPolylineCoordinate = roadConditionSegments[1].polylines[0].coordinate
+            XCTAssertEqual(firstPartlyCoveredPolylineCoordinate.latitude, 42.396, accuracy: 0.001)
+            XCTAssertEqual(firstPartlyCoveredPolylineCoordinate.longitude, -98.451, accuracy: 0.001)
         }
         
         wait(for: [expectation], timeout: 5)
