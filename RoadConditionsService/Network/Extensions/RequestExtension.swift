@@ -2,7 +2,7 @@ import Foundation
 import MapKit
 import PromiseKit
 
-extension URLRequest {
+extension Request {
     func responseDecodable<T: Decodable>() -> Promise<T> {
         responseDecodable(T.self)
     }
@@ -20,21 +20,6 @@ extension URLRequest {
            }.catch { error in
                seal.reject(error)
            }
-        }
-    }
-    
-    func responseData() -> Promise<Data> {
-        Promise { seal in
-            let task = URLSession.shared.dataTask(with: self, completionHandler: { (data, response, error) in
-                guard let data = data else {
-                    seal.reject(error ?? RoadConditionsError.unknown)
-                    return
-                }
-                
-                seal.fulfill(data)
-            })
-            
-            task.resume()
         }
     }
 

@@ -1,10 +1,10 @@
 import Foundation
 
-protocol ArcGISEndpointRouter: EndpointRouter { }
+protocol INDOTEndpointRouter: EndpointRouter { }
 
-extension ArcGISEndpointRouter {
+extension INDOTEndpointRouter {
     var urlRequest: URLRequest {
-        let baseUrlString = "https://opendata.arcgis.com/datasets/"
+        let baseUrlString = "https://indot.carsprogram.org/tgevents/api"
 
         guard let baseUrl = URL(string: baseUrlString) else { fatalError("Invalid URL") }
         let url = baseUrl.appendingPathComponent(components.path)
@@ -16,8 +16,10 @@ extension ArcGISEndpointRouter {
 
         var urlRequest = URLRequest(url: urlWithComponents)
         urlRequest.httpMethod = components.method.rawValue
-
+        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: components.params ?? [:])
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        
         return urlRequest
     }
-
 }

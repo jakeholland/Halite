@@ -1,0 +1,44 @@
+default_platform(:ios)
+
+platform :ios do
+
+  before_all do
+    setup_ci
+    xcversion(version: "11.3.1")
+  end
+
+  desc "Build and test application"
+  lane :test do
+    sync_code_signing(type: "development", readonly: is_ci)
+    run_tests(scheme: "Halite")
+  end
+
+  desc "Push a new build to TestFlight"
+  lane :beta do
+    increment_build_number(build_number: Time.new.strftime('%Y.%m.%d.%H.%M'))
+    sync_code_signing(type: "appstore", readonly: is_ci)
+    build_app(
+      scheme: "Halite",
+      export_method: "app-store",
+      configuration: "Release"
+    )
+    upload_to_testflight(
+      skip_submission: true,
+      skip_waiting_for_build_processing: true
+    )
+  end
+
+  desc "Push a new release build to the App Store"
+  lane :release do
+    increment_build_number(build_number: Time.new.strftime('%Y.%m.%d.%H.%M'))
+    sync_code_signing(type: "appstore", readonly: is_ci)
+    build_app(
+      scheme: "Halite",
+      export_method: "app-store",
+      configuration: "Release",
+      include_bitcode: true
+    )
+    upload_to_app_store(skip_metadata: true, skip_screenshots: true)
+  end
+
+end
