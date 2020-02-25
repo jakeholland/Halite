@@ -2,8 +2,8 @@ import CoreLocation
 import MapKit
 
 enum ArcGISRouter: ArcGISEndpointRouter {
-    case getMidwestRoadConditions(in: MKCoordinateRegion)
-    case getIowaRoadConditions(in: MKCoordinateRegion)
+    case getMidwestRoadConditions
+    case getIowaRoadConditions
 
     var components: RequestComponents {
         switch self {

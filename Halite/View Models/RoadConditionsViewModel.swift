@@ -17,7 +17,7 @@ final class RoadConditionsViewModel: ObservableObject {
     
     func loadRoadConditions() {
         isLoading = true
-        roadConditionsService.getRoadConditions(in: region) { result in
+        roadConditionsService.getRoadConditions { result in
             self.isLoading = false
             switch result {
             case .success(let roadConditionsSegments):
