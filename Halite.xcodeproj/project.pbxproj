@@ -746,11 +746,11 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2020.02.24.21.53;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 2020.02.24.21.53;
+				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "RoadConditionsService/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -777,11 +777,11 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2020.02.24.21.53;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 2020.02.24.21.53;
+				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "RoadConditionsService/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -966,7 +966,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Halite/Supporting Files/Halite.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development: Jake Holland (846KM28N2Y)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2020.02.24.21.53;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Halite/Preview Content\"";
 				DEVELOPMENT_TEAM = SU4T96VBX6;
 				ENABLE_PREVIEWS = YES;
@@ -994,7 +994,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Halite/Supporting Files/Halite.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Distribution: Jacob Holland (SU4T96VBX6)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2020.02.24.21.53;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Halite/Preview Content\"";
 				DEVELOPMENT_TEAM = SU4T96VBX6;
 				ENABLE_PREVIEWS = YES;
