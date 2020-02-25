@@ -4,7 +4,7 @@ on:
       - release
 name: Release To App Store
 jobs:
-  test:
+  release:
     runs-on: macOS-latest
     env:
       FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
